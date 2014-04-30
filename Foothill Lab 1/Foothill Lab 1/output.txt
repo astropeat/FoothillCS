@@ -1,0 +1,24 @@
+*************************************************
+
+					Bank of US
+
+
+	For Customer Service call 1-800-111-2222
+		CUSTOMER ATM TRANSACTION RECEIPT
+
+					01/09/2014
+
+Customer name:				Katrina Bugyi
+
+Account number:				1230789912
+
+Transaction amount:			$500.00
+
+Transaction type:			Deposit
+
+Available balance:			$2500.00
+
+	Thanks for doing business with Bank of US.
+				Have a great day!
+
+*************************************************
