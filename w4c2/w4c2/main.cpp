@@ -118,6 +118,92 @@ statmenet4;
 
 
 
+/*  NESTED LOOP  
+ http://www.cplusplus.com/forum/beginner/9717/
+ 
+ for (exp1; cond1; exp2){
+   for (exp3; cond2; exp4){
+   
+   }
+ }
+ 
+ 
+ */
+
+/* ARRAYS 
+ http://www.cplusplus.com/reference/array/array/?kw=array
+ http://www.cplusplus.com/doc/tutorial/arrays/
+ 
+ Arrays are lists. The simplest data structures
+ Arrays have fixed size. You can't expand or shrink it
+ All array elements are of the same datatype. (all ints, doubles, etc)
+ Array elements can be accessed randomly - arrays have a contiguous block of memory
+ 
+ How to *declare* an array:
+   (element data type) (array name) [size];
+
+   int scores [1024];
+   double balances [2048];
+   string names [100];
+ 
+ 
+How to *initialize* an array:
+   int months[12] = {01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12};
+
+Initialize and start everything at 0:
+   int list[20000] = {0};
+
+How to access array elements:
+ 
+ int months[12];
+ months[0]=1;
+ months[4]=5;
+ 
+ 
+ cout << months[6] << endl;
+ cin >> months[7];
+ 
+ ****** months[12]=30; <----- Index out of bounds! this may crash the program. *******
+ 
+ 
+ 
+How to process an array: loop! (most likely for loop)
+
+ int scores[32];
+ //compute sum of scores.
+ int sum = 0;
+ for (int i = 0; i < 32, i++){
+   sum += scores[i];
+ }
+ 
+
+ */
+
+
+/*
+ LAB 3
+ 
+ 2 arrays 
+   1. account number (string)
+   2. PIN (int)
+ 
+ int pins[16]={0000, 0001, 0002, 0003, 0004, 0005, 0006.....};
+ 
+ string accounts[16]={"A10203", "B202398", "C3838477", ...};
+ 
+ 
+ Authentication:
+ 
+ account number + pin number. use getline for account number, cin for pin...
+ store input in customer_pin, customer_account.
+ cust_account input B202398 and cust_pin 0001
+ Go through the whole array and compare one at a time (for loop). 
+ for(){
+ if(cust_account == accounts[i] && cust_pin == pins[i])
+
+ index must match for authentication.
+ 
+*/
 
 
 
