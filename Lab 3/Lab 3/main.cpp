@@ -2,10 +2,10 @@
 // File Name   : Lab3.cpp
 // Author      : Katrina Bugyi
 // Copyright   : Your copyright notice
-// Description : Lab 2 Foothill C++
+// Description : Lab 3 Foothill C++
 // Revision History:
 // Date              Version     Change ID    Author          Comment
-// 05-01-14          1.0         123          Katrina Bugyi   Initial creation
+// 05-12-14          1.0         1          Katrina Bugyi     Turn in
 //============================================================================
 
 //initialize libraries
