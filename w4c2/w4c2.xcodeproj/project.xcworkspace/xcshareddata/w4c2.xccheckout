@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AB6331FE-EA94-46B5-AF2E-633924B0902F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>w4c2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>45EC3E71-293A-40D7-9BF0-BF2EC8758C6E</key>
+		<string>https://github.com/astropeat/FoothillCS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>w4c2/w4c2.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>45EC3E71-293A-40D7-9BF0-BF2EC8758C6E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/astropeat/FoothillCS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>45EC3E71-293A-40D7-9BF0-BF2EC8758C6E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>45EC3E71-293A-40D7-9BF0-BF2EC8758C6E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FoothillCS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
