@@ -5,12 +5,8 @@
 // Description : Lab 3 Foothill C++
 // Revision History:
 // Date              Version     Change ID    Author          Comment
-<<<<<<< HEAD
 // 05-02-14          1.0         123          Katrina Bugyi   Initial creation
 // 05-12-14          2.0         1234         Katrina Bugyi   Wrap up
-=======
-// 05-12-14          1.0         1          Katrina Bugyi     Turn in
->>>>>>> FETCH_HEAD
 //============================================================================
 
 //initialize libraries
