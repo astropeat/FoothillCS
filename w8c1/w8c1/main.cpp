@@ -48,6 +48,18 @@ int main(){
    cout << ptr << endl;
 
 
+
+   for (int i = 0; i < 4; i++){
+      *ptr *= 2;
+      cout << *ptr << endl;
+      ptr ++;
+   }
+
+   //Here the base address plus whatever is set by dereference. This way you dont change the value of ptr.
+   *(ptr+3) = 15;
+
+
+
    return 0;
 }
 
