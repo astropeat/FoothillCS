@@ -153,11 +153,11 @@ public:
          "F1", "F2", "F3"};
       string descriptions[18]={
          "Basil", "Mint", "Rosemary",
-         "Oregano", "Salt", "Pepper",
-         "Tumeric", "Nutmeg", "Cinnamon",
+         "Salt", "Pepper", "Oregano", 
+         "Cloves", "Nutmeg", "Cinnamon",
          "Thyme", "Curry", "Lavender",
          "Lime", "Cumin", "Garlic",
-         "Lemon", "Chili", "Cloves"};
+         "Lemon", "Chili", "Tumeric"};
       double prices[18]={
          0.75, 0.90, 1.50,
          2.00, 2.50, 1.25,
