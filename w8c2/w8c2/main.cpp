@@ -10,7 +10,7 @@
 #include <iomanip>
 
 using namespace std;
-/*
+
 class name{
 private:
    string first, last, middle;
@@ -24,7 +24,7 @@ public:
 
 };
 
-
+/*
 int main()
 {
    //Pointers to objects
@@ -109,13 +109,35 @@ int main()
    you can request memory as needed at run-time.
    memory leak is bad.
    it's the programmer's responsibility to free the requested memory.
- 
- 
- 
- 
  */
 
 
+int main(){
+   //dynamic memory allocation (DMA)
 
+   int * ip;
+
+   name * np1;
+   name * np2;
+   name * np3;
+
+   ip = new int;
+   np1 = new name();
+   np2 = new name("Katrina", "Anne", "Bugyi");
+   np3 = new name("Austin", "James", "Hendrix");
+
+   //allocate heap mmory
+   //call constructor
+   //return address of newly allocated memory
+   np1 = np3;
+   np3 = np2;
+
+   // Memory deallocation below; does the reverse of above.
+   // frees heap memory, calls destructor.
+   delete np1;
+   delete np3;
+
+   return 0;
+}
 
 
