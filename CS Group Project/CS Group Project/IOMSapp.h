@@ -11,24 +11,23 @@
 #define __CS_Group_Project__IOMSapp__
 
 #include <iostream>
+#include <iomanip>
 #include <string>
+
 #include "SecuritySystem.h"
 #include "ProductDatabase.h"
 #include "OrderDatabase.h"
+
 using namespace std;
 
-class IOMSapp
-{
-private:
-string *SS=&obj1;
-string *PD=&obj2
-SecuritySystem obj1;
-ProductDatabase obj2;
-OrderDatabase obj3;
+class IOMSapp{
+   private:
+      ProductDatabase * PD;
+      OrderDatabase * OD;
+      SecuritySystem * SS;
 
-
-public:
-
+   public:
+      IOMSapp();
 
 
 };

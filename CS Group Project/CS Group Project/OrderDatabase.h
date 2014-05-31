@@ -10,8 +10,6 @@
 #define __CS_Group_Project__OrderDatabase__
 
 #include <iostream>
-#include "OrderDatabase.cpp"
-
 
 using namespace std;
 
@@ -25,8 +23,10 @@ private:
 public:
    //Constructor: default constructor will set data file name to “orders.txt”.
    OrderDatabase():data_filename("orders.txt"){};
+
    //A non-default constructor will take a file name parameter
    OrderDatabase(string filename):data_filename(filename){};
+
    //Destructor: de-allocate heap memory
    ~OrderDatabase(){cout << "OrderDatabase is destroyed ..." << endl;}
 
