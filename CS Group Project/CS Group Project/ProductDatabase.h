@@ -16,9 +16,9 @@ using namespace std;
 
 class ProductDatabase
 {
-public:
-
 private:
+
+public:
 
 };
 

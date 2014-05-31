@@ -16,9 +16,9 @@ using namespace std;
 
 class Account
 {
-public:
-
 private:
+
+public:
 
 };
 

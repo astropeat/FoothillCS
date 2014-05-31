@@ -16,9 +16,9 @@ using namespace std;
 
 class Order
 {
-public:
-
 private:
+
+public:
    
 };
 #endif /* defined(__CS_Group_Project__Order__) */
