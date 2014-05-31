@@ -22,7 +22,8 @@ int SecuritySystem::checkusername(string inputusername){
     if (username[x]==inputusername)
     {
       index=x;
-      return 0;//return this on success
+      //return this on success
+      return 0;
     }
   }
    cout << "Unable to authenticate" << endl;
@@ -37,5 +38,6 @@ int SecuritySystem::checkpassword(string inputpassword){
     return 0;
   }
    cout << "Unable to authenticate" << endl;
-    return -1;//failure
+   //failure
+   return -1;
 }
