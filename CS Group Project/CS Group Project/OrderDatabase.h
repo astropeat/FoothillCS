@@ -21,12 +21,12 @@ using namespace std;
 class OrderDatabase
 {
 private:
-
+   string data_filename;
 public:
    //Constructor: default constructor will set data file name to “orders.txt”.
    OrderDatabase():data_filename("orders.txt"){};
    //A non-default constructor will take a file name parameter
-   OrderDatabase(){};
+   OrderDatabase(string filename):data_filename(filename){};
    //Destructor: de-allocate heap memory
    ~OrderDatabase(){cout << "OrderDatabase is destroyed ..." << endl;}
 
