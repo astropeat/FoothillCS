@@ -19,6 +19,8 @@ class SecuritySystem
         int checkusername(string);
         int checkpassword(string);
         int authenticate();
+
+   
   private:
           OrderDatabase [MAXCOUNT1];
           string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Joe","Fred","Frank","Dylan","Starbucks"}
