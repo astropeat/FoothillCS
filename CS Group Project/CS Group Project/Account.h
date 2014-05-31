@@ -2,8 +2,8 @@
 //  Account.h
 //  CS Group Project
 //
-//  Created by Katrina Bugyi on 5/31/14.
-//  Copyright (c) 2014 Katrina Bugyi. All rights reserved.
+//  Created by Jose Parente on 5/31/14.
+//  Copyright (c) 2014 Jose Parente. All rights reserved.
 //
 
 #ifndef __CS_Group_Project__Account__
@@ -22,18 +22,12 @@ private:
    string password;
 public:
    //Constructor (default and non-default constructors)
-   Account(){};
+   Account();
    //Destructor
-   ~Account(){};
-    string getusername();
-    string getpassword();
+   ~Account();
+    string getUsername();
+    string getPassword();
     
-
-
-
-
-
 };
-
 
 #endif /* defined(__CS_Group_Project__Account__) */
