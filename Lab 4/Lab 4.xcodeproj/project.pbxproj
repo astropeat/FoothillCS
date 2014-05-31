@@ -227,6 +227,7 @@
 				E82BB07C192FFDBE00688775 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
