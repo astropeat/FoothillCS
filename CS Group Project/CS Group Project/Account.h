@@ -25,6 +25,10 @@ public:
    Account(){};
    //Destructor
    ~Account(){};
+    string getusername();
+    string getpassword();
+    
+
 
 
 
