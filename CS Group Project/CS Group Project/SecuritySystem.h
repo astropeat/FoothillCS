@@ -8,18 +8,21 @@
 
 #ifndef __CS_Group_Project__SecuritySystem__
 #define __CS_Group_Project__SecuritySystem__
-
+static const int MAXCOUNT = 9;
+static const int MAXCOUNT1=16;
+#include "OrderDatabase.h"
 #include <iostream>
-#include <iomanip>
-
-using namespace std;
-
 class SecuritySystem
 {
-public:
-
-private:
-
-};
-
+  public:
+         //get input
+        int checkusername();
+        int checkpassword();
+        int authenticate();
+  private:
+          OrderDatabase [MAXCOUNT1];
+          string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Joe","Fred","Frank","Dylan","Starbucks"}
+          string password[MAXCOUT]={"x","y","z","a","b","c","d","e","f"}
+}
+#endif /* defined(__CS_Group_Project__IOMSapp__) */
 #endif /* defined(__CS_Group_Project__SecuritySystem__) */
