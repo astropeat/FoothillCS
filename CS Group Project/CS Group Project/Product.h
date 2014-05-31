@@ -10,11 +10,5 @@
 #define __CS_Group_Project__Product__
 
 #include <iostream>
-#include <iomanip>
-#include <cmath>
-
-using namespace std;
-
-
 
 #endif /* defined(__CS_Group_Project__Product__) */

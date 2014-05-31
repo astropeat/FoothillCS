@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E801BF26193A473A00596C58 /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E801BF24193A473A00596C58 /* Product.cpp */; };
 		E825BA25193A3B1500C836A4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA24193A3B1500C836A4 /* main.cpp */; };
 		E825BA27193A3B1500C836A4 /* CS_Group_Project.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E825BA26193A3B1500C836A4 /* CS_Group_Project.1 */; };
 		E825BA32193A3EF700C836A4 /* IOMSapp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA30193A3EF700C836A4 /* IOMSapp.cpp */; };
 		E825BA35193A3F0E00C836A4 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA33193A3F0E00C836A4 /* Account.cpp */; };
-		E825BA4D193A40CD00C836A4 /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA4B193A40CD00C836A4 /* Product.cpp */; };
 		E825BA50193A410400C836A4 /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA4E193A410400C836A4 /* Order.cpp */; };
 		E825BA53193A412000C836A4 /* OrderDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA51193A412000C836A4 /* OrderDatabase.cpp */; };
 		E825BA56193A413700C836A4 /* ProductDatabase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA54193A413700C836A4 /* ProductDatabase.cpp */; };
@@ -32,15 +32,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E825BA21193A3B1500C836A4 /* CS Group Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "CS Group Project"; path = "/Users/kbugyi/Documents/FoothillCS/CS Group Project/build/Debug/CS Group Project"; sourceTree = "<absolute>"; };
+		E801BF23193A471E00596C58 /* CS Group Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CS Group Project"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E801BF24193A473A00596C58 /* Product.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Product.cpp; sourceTree = "<group>"; };
+		E801BF25193A473A00596C58 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		E825BA24193A3B1500C836A4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E825BA26193A3B1500C836A4 /* CS_Group_Project.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CS_Group_Project.1; sourceTree = "<group>"; };
 		E825BA30193A3EF700C836A4 /* IOMSapp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IOMSapp.cpp; sourceTree = "<group>"; };
 		E825BA31193A3EF700C836A4 /* IOMSapp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOMSapp.h; sourceTree = "<group>"; };
 		E825BA33193A3F0E00C836A4 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
 		E825BA34193A3F0E00C836A4 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		E825BA4B193A40CD00C836A4 /* Product.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Product.cpp; sourceTree = "<group>"; };
-		E825BA4C193A40CD00C836A4 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
 		E825BA4E193A410400C836A4 /* Order.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Order.cpp; sourceTree = "<group>"; };
 		E825BA4F193A410400C836A4 /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
 		E825BA51193A412000C836A4 /* OrderDatabase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OrderDatabase.cpp; sourceTree = "<group>"; };
@@ -66,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				E825BA23193A3B1500C836A4 /* CS Group Project */,
+				E801BF23193A471E00596C58 /* CS Group Project */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,13 +82,13 @@
 				E825BA4F193A410400C836A4 /* Order.h */,
 				E825BA51193A412000C836A4 /* OrderDatabase.cpp */,
 				E825BA52193A412000C836A4 /* OrderDatabase.h */,
-				E825BA4B193A40CD00C836A4 /* Product.cpp */,
-				E825BA4C193A40CD00C836A4 /* Product.h */,
 				E825BA54193A413700C836A4 /* ProductDatabase.cpp */,
 				E825BA55193A413700C836A4 /* ProductDatabase.h */,
 				E825BA57193A45B900C836A4 /* SecuritySystem.cpp */,
 				E825BA58193A45B900C836A4 /* SecuritySystem.h */,
 				E825BA26193A3B1500C836A4 /* CS_Group_Project.1 */,
+				E801BF24193A473A00596C58 /* Product.cpp */,
+				E801BF25193A473A00596C58 /* Product.h */,
 			);
 			path = "CS Group Project";
 			sourceTree = "<group>";
@@ -109,7 +110,7 @@
 			);
 			name = "CS Group Project";
 			productName = "CS Group Project";
-			productReference = E825BA21193A3B1500C836A4 /* CS Group Project */;
+			productReference = E801BF23193A471E00596C58 /* CS Group Project */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -148,8 +149,8 @@
 				E825BA56193A413700C836A4 /* ProductDatabase.cpp in Sources */,
 				E825BA53193A412000C836A4 /* OrderDatabase.cpp in Sources */,
 				E825BA50193A410400C836A4 /* Order.cpp in Sources */,
+				E801BF26193A473A00596C58 /* Product.cpp in Sources */,
 				E825BA35193A3F0E00C836A4 /* Account.cpp in Sources */,
-				E825BA4D193A40CD00C836A4 /* Product.cpp in Sources */,
 				E825BA32193A3EF700C836A4 /* IOMSapp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
