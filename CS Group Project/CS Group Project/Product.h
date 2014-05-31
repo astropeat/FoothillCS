@@ -10,5 +10,16 @@
 #define __CS_Group_Project__Product__
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+class Product
+{
+public:
+
+private:
+
+};
 
 #endif /* defined(__CS_Group_Project__Product__) */

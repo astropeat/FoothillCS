@@ -13,12 +13,15 @@ static const int MAXCOUNT = 9+x;
 
 #include <iostream>
 #include <string>
+
+using namespace std;
+
 class IOMSapp
 {
   public:
   
   private:
-          string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Joe","Fred","Frank","Dylan","Starbucks"}
-          string password[MAXCOUT]={"x","y","z","a","b","c","d","e","f"}
-}
+   string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Joe","Fred","Frank","Dylan","Starbucks"};
+   string password[MAXCOUNT]={"x","y","z","a","b","c","d","e","f"};
+};
 #endif /* defined(__CS_Group_Project__IOMSapp__) */

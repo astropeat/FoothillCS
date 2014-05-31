@@ -10,5 +10,17 @@
 #define __CS_Group_Project__Account__
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+class Account
+{
+public:
+
+private:
+
+};
+
 
 #endif /* defined(__CS_Group_Project__Account__) */
