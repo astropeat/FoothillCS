@@ -16,13 +16,14 @@ class SecuritySystem
 {
   public:
          //get input
-        int checkusername();
+        int checkusername(string);
         int checkpassword();
         int authenticate();
   private:
           OrderDatabase [MAXCOUNT1];
           string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Joe","Fred","Frank","Dylan","Starbucks"}
           string password[MAXCOUT]={"x","y","z","a","b","c","d","e","f"}
+          int index;//this will be the location in the array
 }
 #endif /* defined(__CS_Group_Project__IOMSapp__) */
 #endif /* defined(__CS_Group_Project__SecuritySystem__) */
