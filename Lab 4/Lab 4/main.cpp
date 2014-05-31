@@ -15,7 +15,7 @@
 
 using namespace std;
 
-
+void pause();
 
 class Product{
 private:
@@ -216,10 +216,11 @@ public:
 
    void insertCoin(){
       double added_coins;
-      cout << "Insert Coin Amount: ";
+      cout << "\n\nInsert Coin Amount: ";
       cin >> added_coins;
       customer_credit.insertCoins(added_coins);
-      cout << "Your balance is $"<< customer_credit.totalValue() << endl;
+      pause();
+      cout << "\nYour balance is $"<< customer_credit.totalValue() << "\n\n" << endl;
    }
 
    void selectProduct(){
@@ -234,12 +235,18 @@ public:
                   vendingProducts[i].removeProduct(1);
                   double credit = customer_credit.clear();
                   credit -= vendingProducts[i].getPrice();
-                  cout << "Total amount returned: $" << credit <<"\n\n"<< endl;
+                  pause();
+                  cout << "\nTotal amount returned: $" << credit <<"\n"<< endl;
+                  cout << "One " << vendingProducts[i].getDescription() << ".\n" << endl;
+                  cout << "There are "<< vendingProducts[i].getQuantity() <<" "<< vendingProducts[i].getDescription() << " remaining.\n\n" << endl;
                } else {
-                  cout << "Please insert more coins. Your balance is "<< customer_credit.totalValue() << endl;
+                  pause();
+                  cout << "\nPlease insert more coins. \nYour balance is $"<< customer_credit.totalValue() << "\n\n" << endl;
                   insertCoin();
-               };
-
+               }
+            
+            } else {
+               cout << "\n Pick another item. That one has run out.\n" << endl;
             }
          }
       }
@@ -247,7 +254,8 @@ public:
 
    void returnCoins(){
       double returned_value = customer_credit.clear();
-      cout << "You have been returned $" << returned_value << "." << endl;
+      pause();
+      cout << "\nYou have been returned $" << returned_value << ".\n\n" << endl;
    }
 
 
@@ -270,7 +278,7 @@ public:
             returnCoins();
             break;
          default:
-            cout << "\tPlease choose again.\n\n";
+            cout << "1\n\tPlease choose again.\n\n";
             break;
          }
       }
@@ -281,4 +289,14 @@ public:
 int main(){
    VendingMachine UltimateVendor;
    UltimateVendor.Operate();
+}
+
+
+void pause () {
+   long count = 0;
+   cout << "\n\nPlease wait\n\n" << endl;
+   while (isspace(cin.peek()) && count != 3000000) {
+      count++;
+
+   }
 }
