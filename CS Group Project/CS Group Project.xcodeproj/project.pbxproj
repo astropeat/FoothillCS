@@ -82,13 +82,13 @@
 				E825BA4F193A410400C836A4 /* Order.h */,
 				E825BA51193A412000C836A4 /* OrderDatabase.cpp */,
 				E825BA52193A412000C836A4 /* OrderDatabase.h */,
+				E801BF24193A473A00596C58 /* Product.cpp */,
+				E801BF25193A473A00596C58 /* Product.h */,
 				E825BA54193A413700C836A4 /* ProductDatabase.cpp */,
 				E825BA55193A413700C836A4 /* ProductDatabase.h */,
 				E825BA57193A45B900C836A4 /* SecuritySystem.cpp */,
 				E825BA58193A45B900C836A4 /* SecuritySystem.h */,
 				E825BA26193A3B1500C836A4 /* CS_Group_Project.1 */,
-				E801BF24193A473A00596C58 /* Product.cpp */,
-				E801BF25193A473A00596C58 /* Product.h */,
 			);
 			path = "CS Group Project";
 			sourceTree = "<group>";
