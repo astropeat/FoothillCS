@@ -10,5 +10,16 @@
 #define __CS_Group_Project__OrderDatabase__
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+class OrderDatabase
+{
+public:
+
+private:
+
+};
 
 #endif /* defined(__CS_Group_Project__OrderDatabase__) */

@@ -10,5 +10,16 @@
 #define __CS_Group_Project__SecuritySystem__
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+class SecuritySystem
+{
+public:
+
+private:
+
+};
 
 #endif /* defined(__CS_Group_Project__SecuritySystem__) */
