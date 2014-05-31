@@ -7,3 +7,5 @@
 //
 
 #include "Account.h"
+//Functions: get/set functions for user name and password and other functions if needed
+

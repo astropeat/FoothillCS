@@ -10,15 +10,24 @@
 #define __CS_Group_Project__Account__
 
 #include <iostream>
-#include <iomanip>
 
 using namespace std;
 
-class Account
-{
-private:
 
+class Account{
+
+private:
+   //Data: user name and password (strings)
+   string user_name;
+   string password;
 public:
+   //Constructor (default and non-default constructors)
+   Account(){};
+   //Destructor
+   ~Account(){};
+
+
+
 
 };
 
