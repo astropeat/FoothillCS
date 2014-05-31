@@ -17,7 +17,7 @@ class SecuritySystem
   public:
          //get input
         int checkusername(string);
-        int checkpassword();
+        int checkpassword(string);
         int authenticate();
   private:
           OrderDatabase [MAXCOUNT1];
