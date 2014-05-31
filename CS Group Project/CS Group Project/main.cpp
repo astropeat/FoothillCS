@@ -1,16 +1,20 @@
-//
-//  main.cpp
-//  CS Group Project
-//
-//  Created by Katrina Bugyi on 5/31/14.
-//  Copyright (c) 2014 Katrina Bugyi. All rights reserved.
-//
+//============================================================================
+// File Name   : CS Group Project.cpp
+// Author      : Katrina Bugyi, Jason Ng, Jose Parente, Sarah R
+// Copyright   : Your copyright notice
+// Description : Lab 3 Foothill C++
+// Revision History:
+// Date              Version     Change ID    Author          Comment
+// 05-23-14          1.0         123          Katrina Bugyi   Initial creation
+//============================================================================
 
 #include <iostream>
+#include <iomanip> 
+#include <cmath>
 
 using namespace std;
 
-int main(int argc, const char * argv[])
+int main()
 {
    cout << "here is where we put the code" << endl;
    return 0;
