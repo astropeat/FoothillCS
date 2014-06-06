@@ -1,21 +1,27 @@
 //============================================================================
 // File Name   : Lab4.cpp
 // Author      : Katrina Bugyi
-// Copyright   : Your copyright notice
-// Description : Lab 3 Foothill C++
+// Copyright   : Bugyi
+// Description : Lab 4 Foothill C++
 // Revision History:
 // Date              Version     Change ID    Author          Comment
 // 05-23-14          1.0         123          Katrina Bugyi   Initial creation
+// 06-04-14          1.5         202          Katrina Bugyi   Turn in
 //============================================================================
 
 //initialize libraries
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <cstdlib>
+#include <ctime>
+
+
 
 using namespace std;
 
 void pause();
+
 
 class Product{
 private:
@@ -143,6 +149,7 @@ private:
    string VendingMachineHeader = "Mountain View Vending Machine";
 
 public:
+
    void createProducts() {
       string position[18]={
          "A1", "A2", "A3",
@@ -181,7 +188,17 @@ public:
    }
 
    VendingMachine(string enteredID): vending_balance(1200, 1000, 2000) {
-      machineID = enteredID;
+
+      char  alphanum [] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"};
+
+      srand (time_t(NULL));
+
+      string  machineID = "";
+
+      for (int i=0; i< 6; i++){
+         machineID  +=  alphanum [rand ( ) % 36] ;
+      }
+      machineID = machineID;
       createProducts();
    }
    ~VendingMachine(){cout << "Vending machine "<< machineID <<" is destroyed …" << endl;}
