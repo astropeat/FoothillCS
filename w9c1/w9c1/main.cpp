@@ -61,10 +61,18 @@ Friend Classes <3
 Elementary sorting algorithms O(n^2)
 
 //Binary search algorithm
+ http://en.wikipedia.org/wiki/Binary_search_algorithm
+ http://www.fredosaurus.com/notes-cpp/algorithms/searching/binarysearch.html
+ http://mycodinglab.com/binary-search-algorithm-c/
+ http://www.cplusplus.com/reference/algorithm/binary_search/
+ // very fast and efficient
+ // in worst case scenario it takes only Log2N comparison to determine if an element is in the list.
 //Return: index of the element whose value is the target parameter or -1 if not found
+ 
+
 
 int  binarySearch (int list [ ], int size, int target) {
-
+ //This relies on the list being pre-sorted. It is unwise to do otherwise. 
 
    int first = 0;
    int last = size -1 ;
@@ -72,10 +80,13 @@ int  binarySearch (int list [ ], int size, int target) {
 
    while (first <= last) {
       mid = (first+last)/2;
+ //looks for the middle element in the list. if equal it stops.
       if (target == list[mid])
          return mid;
+ //If the value of target is larger than middle element it searches the second half of the list.
       else if (target > list[mid])
          first = mid+1;
+ //Otherwise it searches the first half of the list.
       else
          last = mid-1;
    }
