@@ -11,80 +11,6 @@
 
 using namespace std;
 
-
-/*    CLASS 1
-
-   //Binary search algorithm
-   // Return: index of the element whose value is the target parameter or -1 if not found
-
-   int  binarySearch (int list [ ], int size, int target) {
-
-
-      int first = 0;
-      int last = size -1 ;
-      int mid ;
-
-      while (first <= last) {
-         mid = (first+last)/2;
-         if (target == list[mid])
-            return mid;
-         else if (target > list[mid])
-            first = mid+1;
-         else
-            last = mid-1;
-      }
-      
-      return  -1;  // not found
-   }
-
-
-   //Selection Sort Algorithm
-void selectionSort (int list [ ], int size) {
-
-   int smallest , tmp, walker;
-
-   for (int first =0; first < size -1; first++){
-      smallest = first;
-      for (walker=first+1; walker < size; walker++) { // find the index of smallest element
-         if (list[walker] < list[smallest])
-            smallest = walker;
-
-      } // end of inner loop
-        // swap between first and smallest elements
-      tmp = list[first];
-      list[first] = list[smallest];
-      list[smallest]=tmp;
-
-   } // end of outer loop
-
-}
-
-
-
-//Bubble Sort Algorithm
-void bubbleSort (int list [ ] , int size) {
-
-   int  tmp, walker;
-
-   for (int curr =0; curr < size -1; curr++){
-
-      for (walker= size-1; walker > curr; walker--) {
-         if (list[walker] < list[walker-1]) {
-            // swap
-            tmp = list[walker];
-            list[walker] = list[walker-1];
-            list[walker-1] = tmp;
-         }
-      } // end of inner loop
-
-   } // end of outer loop
-
-}
-
-
-*/
-
-
 /* CLASS 2
 Friendship <3
      - "breaks" encapsulation" -> don't use unless you know what it means.
@@ -115,7 +41,7 @@ class Employee{
  
  void display (const Employee & e){
    cout << e.name << " " << e.salary << endl;
- 
+
  //name, salary are private but accessible because display is a friend of Employee class.
 
  }
@@ -126,11 +52,95 @@ class Employee{
  
 Friend Classes <3
  
- 
-
- 
- 
  */
+
+
+
+/*
+
+Elementary sorting algorithms O(n^2)
+
+//Binary search algorithm
+//Return: index of the element whose value is the target parameter or -1 if not found
+
+int  binarySearch (int list [ ], int size, int target) {
+
+
+   int first = 0;
+   int last = size -1 ;
+   int mid ;
+
+   while (first <= last) {
+      mid = (first+last)/2;
+      if (target == list[mid])
+         return mid;
+      else if (target > list[mid])
+         first = mid+1;
+      else
+         last = mid-1;
+   }
+
+   return  -1;  // not found
+}
+
+
+//Selection Sort Algorithm
+void selectionSort (int list [ ], int size) {
+
+   int smallest , tmp, walker;
+
+   for (int first =0; first < size -1; first++){
+      smallest = first;
+      for (walker=first+1; walker < size; walker++) { // find the index of smallest element
+         if (list[walker] < list[smallest])
+            smallest = walker;
+
+      } // end of inner loop
+        // swap between first and smallest elements
+      tmp = list[first];
+      list[first] = list[smallest];
+      list[smallest]=tmp;
+
+   } // end of outer loop
+
+}
+
+
+
+
+//Bubble Sort Algorithm
+This sorts in ascending order or descending order.
+http://mycodinglab.com/bubble-sort-algorithm/
+http://www.sorting-algorithms.com/bubble-sort
+Sorted list starts with 0 elements, unsorted has n elements.
+It goes through the list and adds the smallest number to the sorted list.
+If position n is less than the value of position n-1 it trades places (swaps positions).
+Sorts one element at a time.
+
+void bubbleSort (int list [ ] , int size) {
+
+   int  tmp, walker;
+
+   for (int curr =0; curr < size -1; curr++){
+
+      for (walker= size-1; walker > curr; walker--) {
+         if (list[walker] < list[walker-1]) {
+            // swap
+            tmp = list[walker];
+            list[walker] = list[walker-1];
+            list[walker-1] = tmp;
+         }
+      } // end of inner loop
+
+   } // end of outer loop
+
+}
+
+ THIS IS USEFUL FOR OUR PROJECT!
+*/
+
+
+
 
 int main()
 {
