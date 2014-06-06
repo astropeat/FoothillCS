@@ -12,6 +12,8 @@
 using namespace std;
 
 
+/*    CLASS 1
+
    //Binary search algorithm
    // Return: index of the element whose value is the target parameter or -1 if not found
 
@@ -78,6 +80,57 @@ void bubbleSort (int list [ ] , int size) {
    } // end of outer loop
 
 }
+
+
+*/
+
+
+/* CLASS 2
+Friendship <3
+     - "breaks" encapsulation" -> don't use unless you know what it means.
+     - Used to support another C++ feature, operator overloading.
+ http://www.cplusplus.com/doc/tutorial/inheritance/
+
+Friend functions <3
+ A friend function is a global function, not a local(member) function.
+ A friend function of a class can access private data in that class object. (breaks encapsulation)
+ A function can be a friend of multiple classes.
+ A class can have multiple friend functions.
+ Friendship is granted, not taken.
+
+ 
+ Example below:
+
+class Employee{
+ private:
+   double salary;
+   string name
+ public:
+ 
+ //friend must be declared in the class.
+ //friend is specified by saying 'friend' before the function prototype.
+ friend void display (const Employee &);
+
+ };
+ 
+ void display (const Employee & e){
+   cout << e.name << " " << e.salary << endl;
+ 
+ //name, salary are private but accessible because display is a friend of Employee class.
+
+ }
+ 
+ 
+ 
+ 
+ 
+Friend Classes <3
+ 
+ 
+
+ 
+ 
+ */
 
 int main()
 {
