@@ -11,12 +11,23 @@
 
 #include <iostream>
 #include <iomanip>
+#include "Product.h"
+
+/*
+ Data: order ID, product ID, quantity, customer name, shipping zip code, total invoice
+ 
+ Constructor/destructor: provide default and non-default constructor using member initializer syntax
+ 
+ Functions: get/set functions for all data, view order function, clear order
+ (set all data to 0 or NULL or empty string)
+ */
 
 using namespace std;
 
 class Order
 {
 private:
+
 
 public:
    

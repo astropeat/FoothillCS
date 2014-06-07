@@ -21,6 +21,7 @@ class Product{
       string product_ID = "";
       double price = 0;
       int quantity = 0;
+   
    public:
       //Constructor: provide default and non-default constructor using member initializer syntax
       Product();

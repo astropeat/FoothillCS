@@ -15,7 +15,12 @@ using namespace std;
 
 
 class Account{
-
+   /*Data: user name and password (strings)
+    Constructor (default and non-default constructors)
+    Destructor
+    Functions: get/set functions for user name and password and other functions if needed
+    */
+   
 private:
    //Data: user name and password (strings)
    string user_name;
