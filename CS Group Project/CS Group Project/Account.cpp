@@ -7,5 +7,17 @@
 //
 
 #include "Account.h"
-//Functions: get/set functions for user name and password and other functions if needed
 
+
+
+Account::Account() : user_name_(""), password_("") {};
+
+// The equivalent code is this:
+//Account::Account(string user_name, string password)
+//{
+//   user_name_ = user_name;
+//   password_ = password;
+//};
+Account::Account(string user_name, string password)
+: user_name_(user_name), password_(password)
+{};
