@@ -14,12 +14,22 @@
 
 using namespace std;
 
+//Data: an array of pointers (max is 10000) to Product objects, a string for the data file,
+//a static data for product count
+//Constructor: default constructor will set data file name to “products.txt”.
+//A non-default constructor will take a file name parameter
+//Destructor: de-allocate heap memory
+
+
 class ProductDatabase
 {
 private:
+   
 
 public:
 
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */
+
+
