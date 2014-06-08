@@ -18,8 +18,8 @@ class Account{
 
 private:
    //Data: user name and password (strings)
-   string user_name;
-   string password;
+   string user_name_;
+   string password_;
 public:
     // Constructor (default and non-default constructors)
     Account();
@@ -28,10 +28,10 @@ public:
     // Destructor
    ~Account() {};
 
-   string getUsername() {return user_name;}
-   void setUsername(string user_name) {this->user_name = user_name;}
-   string getPassword() {return password;}
-   void setPassword(string password) {this->password = password;}
+   string getUsername() {return user_name_;}
+   void setUsername(string user_name) {this->user_name_ = user_name;}
+   string getPassword() {return password_;}
+   void setPassword(string password) {this->password_ = password;}
 
 };
 
