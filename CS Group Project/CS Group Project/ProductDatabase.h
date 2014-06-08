@@ -41,5 +41,3 @@ public:
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */
-
-
