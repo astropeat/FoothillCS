@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BD5581D1945124900AE5816 /* Products.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5581C1945124900AE5816 /* Products.txt */; };
+		7BD5581F194512B100AE5816 /* Order.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BD5581E194512B100AE5816 /* Order.txt */; };
 		E801BF26193A473A00596C58 /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E801BF24193A473A00596C58 /* Product.cpp */; };
 		E825BA25193A3B1500C836A4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E825BA24193A3B1500C836A4 /* main.cpp */; };
 		E825BA27193A3B1500C836A4 /* CS_Group_Project.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = E825BA26193A3B1500C836A4 /* CS_Group_Project.1 */; };
@@ -19,6 +21,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		7BD5581B194511B100AE5816 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				7BD5581F194512B100AE5816 /* Order.txt in CopyFiles */,
+				7BD5581D1945124900AE5816 /* Products.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E825BA1F193A3B1500C836A4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -32,6 +45,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7BD5581C1945124900AE5816 /* Products.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Products.txt; path = "CS Group Project/Products.txt"; sourceTree = "<group>"; };
+		7BD5581E194512B100AE5816 /* Order.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = Order.txt; path = "CS Group Project/Order.txt"; sourceTree = "<group>"; };
 		E801BF23193A471E00596C58 /* CS Group Project */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "CS Group Project"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E801BF24193A473A00596C58 /* Product.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Product.cpp; sourceTree = "<group>"; };
 		E801BF25193A473A00596C58 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
@@ -65,6 +80,8 @@
 		E825BA18193A3B1500C836A4 = {
 			isa = PBXGroup;
 			children = (
+				7BD5581E194512B100AE5816 /* Order.txt */,
+				7BD5581C1945124900AE5816 /* Products.txt */,
 				E825BA23193A3B1500C836A4 /* CS Group Project */,
 				E801BF23193A471E00596C58 /* CS Group Project */,
 			);
@@ -103,6 +120,7 @@
 				E825BA1D193A3B1500C836A4 /* Sources */,
 				E825BA1E193A3B1500C836A4 /* Frameworks */,
 				E825BA1F193A3B1500C836A4 /* CopyFiles */,
+				7BD5581B194511B100AE5816 /* CopyFiles */,
 			);
 			buildRules = (
 			);
