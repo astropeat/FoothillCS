@@ -15,24 +15,28 @@ using namespace std;
 
 
 class Account{
-   /*Data: user name and password (strings)
-    Constructor (default and non-default constructors)
-    Destructor
-    Functions: get/set functions for user name and password and other functions if needed
-    */
+    /* Data: user name and password (strings)
+       Constructor (default and non-default constructors)
+       Destructor
+       Functions: get/set functions for user name and password and other functions if needed
+     */
    
 private:
-   //Data: user name and password (strings)
-   string user_name;
-   string password;
+    //Data: user name and password (strings)
+    string user_name_;
+    string password_;
 public:
-   //Constructor (default and non-default constructors)
-   Account();
-   //Destructor
-   ~Account();
-    string getUsername();
-    string getPassword();
-    
+    // Constructor (default and non-default constructors)
+    Account();
+    Account(string user_name, string password);
+
+    // Destructor
+   ~Account() {};
+   string getUsername() {return user_name_;}
+   void setUsername(string user_name) {this->user_name_ = user_name;}
+   string getPassword() {return password_;}
+   void setPassword(string password) {this->password_ = password;}
+
 };
 
 #endif /* defined(__CS_Group_Project__Account__) */
