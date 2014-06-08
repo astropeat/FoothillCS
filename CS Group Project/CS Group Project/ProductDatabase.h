@@ -37,6 +37,7 @@ public:
    // get/set functions
    static int getProductCount() {return product_count_;}
    static void setProductCount(int product_count) {product_count_=product_count;}
+   void sortDatabase();
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */
