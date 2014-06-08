@@ -32,6 +32,7 @@ public:
 
     // Destructor
    ~Account() {};
+
    string getUsername() {return user_name_;}
    void setUsername(string user_name) {this->user_name_ = user_name;}
    string getPassword() {return password_;}

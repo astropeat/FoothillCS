@@ -23,3 +23,17 @@ using namespace std;
 Data: A pointer to SecuritySystem object, a pointer to ProductDatabase object, a pointer to OrderDatabase object
 */
 
+
+
+/* Main Menu
+
+ List All Products
+ Add new Product
+ Discontinue a Product
+ Stocking a Product
+ Query a Product
+ View existing Orders
+ Process an Order
+ Quit
+ Please select an option:  1
+*/
