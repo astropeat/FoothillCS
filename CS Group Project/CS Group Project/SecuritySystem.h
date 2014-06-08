@@ -2,7 +2,7 @@
 //  SecuritySystem.h
 //  CS Group Project
 //
-//  Created by Katrina Bugyi on 5/31/14.
+//  Created by Jason Ngo, Katrina Bugyi on 5/31/14.
 //  Copyright (c) 2014 Katrina Bugyi. All rights reserved.
 //
 
@@ -24,8 +24,9 @@ private:
    Account accounts[MAXCOUNT1];
    string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Anthony","Fred","Frank","Dylan",""};
    string password[MAXCOUNT]={"x",    "y",      "z",   "a",   "b",  "c",   "d",    "e",    "f"};
-          int index;//this will be the location in the array
-
+   int index;//this will be the location in the array
+   int tries = 0;
+   
 public:
    //get input
    int checkusername(string);

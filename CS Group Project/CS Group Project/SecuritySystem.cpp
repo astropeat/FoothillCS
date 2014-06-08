@@ -15,6 +15,9 @@
 //If not ask for a retry.
 //Allow user to retry for a maximum of 3 times before terminating the authentication process.
 
+int authenticate(){
+}
+
 
 int SecuritySystem::checkusername(string inputusername){
   for (int x=0;x<MAXCOUNT;x++)
@@ -27,6 +30,7 @@ int SecuritySystem::checkusername(string inputusername){
     }
   }
    cout << "Unable to authenticate" << endl;
+   
   return -1;//return this on failure
 }
 
