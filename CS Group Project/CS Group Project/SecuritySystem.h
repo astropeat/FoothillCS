@@ -22,7 +22,7 @@ static const int MAXCOUNT1=16;
 class SecuritySystem{
 private:
    Account accounts[MAXCOUNT1];
-   string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Joe","Fred","Frank","Dylan",""};
+   string username[MAXCOUNT]={"Jason","Katrina","Jose","Sara","Anthony","Fred","Frank","Dylan",""};
    string password[MAXCOUNT]={"x",    "y",      "z",   "a",   "b",  "c",   "d",    "e",    "f"};
           int index;//this will be the location in the array
 
