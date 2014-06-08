@@ -22,7 +22,7 @@
 
 
 */
-
+/*
 bool processOrder(Order){
    if (Product.quantity >= order.quantity){
       Order();
@@ -30,4 +30,5 @@ bool processOrder(Order){
    }
    cout << "Can't process Order due to limited stocking." << endl;
    return false;
-}
+
+ }*/
