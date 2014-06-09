@@ -31,11 +31,18 @@ public:
    //get input
    int checkusername(string);
    int checkpassword(string);
-   int authenticate();
+   bool authenticate();
+
 
    //Constructor/destructor: load the array of Account objects from the user name and password arrays.
    //May need to keep track of how many Accounts loaded.
-   SecuritySystem(){};
+   SecuritySystem()
+   {
+      for (int i= 0; i<MAXCOUNT; i++){
+         accounts[i].setUsername(username[i]);
+         accounts[i].setPassword(password[i]);
+      }
+   };
    ~SecuritySystem(){cout << "SecuritySystem is destroyed ..." << endl;}
 };
 
