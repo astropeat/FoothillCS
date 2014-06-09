@@ -1,6 +1,6 @@
 //============================================================================
 // File Name   : CS Group Project.cpp
-// Author      : Katrina Bugyi, Jason Ng, Jose Parente, Sarah R
+// Author      : Katrina Bugyi, Jason Ng, Jose Parente, Sarah Romaniuk, Anthony Moore
 // Copyright   : Your copyright notice
 // Description : Lab 3 Foothill C++
 // Revision History:
