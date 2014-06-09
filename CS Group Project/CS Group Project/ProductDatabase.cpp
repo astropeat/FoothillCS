@@ -8,7 +8,7 @@
 
 #include "ProductDatabase.h"
 #include <iostream>
-
+#include <fstream>
 
 
 
@@ -17,14 +17,20 @@
 //buildDB: reading text file to load product data into database which is an array then call the sort
 //function to sort it by product ID.
 
-void ProductDatabase::buildDB(){
-   ifstream fin;
-   fin.open(filename);
-   if (fin.is_open ( ) == false ) {
-      cout<<"ERROR:Failed to open file: "<<filename<<endl;
-      exit (-1);
+void buildB(){
+   string line;
+   ifstream myfile ("Products.txt");
+   if (myfile.is_open())
+   {
+      while ( getline (myfile,line) )
+      {
+         cout << line << '\n';
+      }
+      myfile.close();
    }
+   else cout << "Unable to open file";
 }
+
 
 //listing (display all product data): invoke a friend function (showProduct)  of Product class
  
