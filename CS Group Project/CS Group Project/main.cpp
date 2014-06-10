@@ -11,12 +11,12 @@
 #include <iostream>
 #include <iomanip> 
 #include <cmath>
-
+#include "IOMSapp.h"
 using namespace std;
 
 int main()
 {
-   cout << "here is where we put the code" << endl;
-   return 0;
+    IOMSapp OBJ;
+    OBJ.run();
 }
 

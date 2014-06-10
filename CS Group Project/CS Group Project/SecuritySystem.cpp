@@ -26,10 +26,11 @@ bool SecuritySystem::authenticate() {
       cout << "Enter user name:\t"; cin >> entered_username;
       cout << "\nEnter password:\t"; cin >> entered_password;
 
-      for (int i; i < MAXCOUNT; i++){
+      for (int i=0; i < MAXCOUNT3; i++){
          if (this->accounts[i].getUsername() == entered_username)
          {
-            if (this->accounts[i].getPassword() == entered_password){
+            if (this->accounts[i].getPassword() == entered_password)
+            {
                return true;
             }
             cout << "Failed to Authenticate" << endl;
