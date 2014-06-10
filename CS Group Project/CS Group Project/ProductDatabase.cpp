@@ -17,20 +17,37 @@
 //buildDB: reading text file to load product data into database which is an array then call the sort
 //function to sort it by product ID.
 
-void buildB(){
+void ProductDatabase::buildB(){
    string line;
    ifstream myfile ("Products.txt");
    if (myfile.is_open())
    {
-      while ( getline (myfile,line) )
-      {
-         cout << line << '\n';
-      }
-      myfile.close();
+       while (myfile.good())
+       {
+           for (int i=0;i<MAXPRODUCT;i++)
+           {
+               while ( getline (myfile,line) )
+               {
+           
+                   cout << line << '\n';
+                   cin>>Products[i];
+               }
+           }
+       }
+       myfile.close();
+
    }
    else cout << "Unable to open file";
 }
 
+void ProductDatabase::DisplayProduct()
+{
+    for (int i=0;i<MAXPRODUCT;i++)
+    {
+    cout<<Products[i]<<endl;
+    }
+    
+}
 
 //listing (display all product data): invoke a friend function (showProduct)  of Product class
  

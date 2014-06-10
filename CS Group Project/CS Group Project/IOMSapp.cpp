@@ -49,9 +49,10 @@ IOMSapp::~IOMSapp()
     delete OD;
     
 }
-void IOMSapp::userauthetication()
+void IOMSapp::welcomemessage()
 {
-   
+    cout<<setw(6)<<setfill('*')<<"Welcome to Inventory and Ordering Management System (IOMS) "<<endl;
+    cout<<"*************************************************"<<endl;
 }
 
 void IOMSapp::showmenu()
@@ -63,7 +64,7 @@ void IOMSapp::showmenu()
     cout<<"5.Query a Product"<<endl;
     cout<<"6.View Existing Orders"<<endl;
     cout<<"7.Process an Order"<<endl;
-    cout<<"Quit"<<endl;
+    cout<<"8.Quit"<<endl;
     cout<<"Please Enter Your Option Here ----->";
     cin>>option;
     
@@ -71,7 +72,24 @@ void IOMSapp::showmenu()
 
 void IOMSapp::run()
 {
-    SS->authenticate();
+    if (SS->authenticate()==true)
+    {
+        option=0;
+        while (option!=8)
+        {
+            welcomemessage();
+            showmenu();
+            switch (option)
+            {
+                case 1:
+                    PD->buildB();
+                    PD->DisplayProduct();
+                    
+                    break;
+            }
+            
+        }
+    }
     
 }
 

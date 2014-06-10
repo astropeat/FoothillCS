@@ -12,6 +12,7 @@ static const int MAXCOUNT = 9;
 
 #include <iostream>
 #include <string>
+#include "Product.h"
 #include "SecuritySystem.h"
 #include "ProductDatabase.h"
 #include "OrderDatabase.h"
@@ -25,7 +26,7 @@ class IOMSapp
     void displaymessage();
     void welcomemessage();
     void showmenu();
-    void userauthetication();
+   
     void initialize_database();
     void run();
     void process_order();
@@ -33,7 +34,8 @@ class IOMSapp
     SecuritySystem *SS;
     ProductDatabase *PD;
     OrderDatabase *OD;
+    
     int option;
-   
+    
 };
 #endif /* defined(__CS_Group_Project__IOMSapp__) */

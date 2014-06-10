@@ -9,13 +9,13 @@
 #include "Product.h"
 
 
-void showProduct(const Product &product)
+void Product::showProduct()
 {
    cout << "Product:" << endl;
-   cout << "  ID: " << product.product_ID << endl;
-   cout << "  Price: " << product.price << endl;
-   cout << "  Quantity: " << product.quantity << endl;
-   cout << "  Description: "<< product.product_description << endl;
+   cout << "  ID: " << product_ID << endl;
+   cout << "  Price: " << price << endl;
+   cout << "  Quantity: " << quantity << endl;
+   cout << "  Description: "<< product_description << endl;
    //...
 }
 

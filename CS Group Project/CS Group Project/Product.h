@@ -40,6 +40,7 @@ public:
    int getQuantity() {return quantity;}
    string getProduct_description() {return product_description;}
 
+    void showProduct();
    void setproduct_ID(string new_product_ID) {product_ID = new_product_ID;}
    void setPrice(double new_price) {price = new_price;}
    void setQuantity(int new_quantity) {quantity = new_quantity;}
@@ -50,10 +51,10 @@ public:
    // Also provide a friend function (showProduct) for this class that will output all Product information.
    // Make sure to define the correct parameter required for this function.
 
-   friend void showProduct(const Product &product);
+   
 };
 
 
-void showProduct(const Product &product);
+
 
 #endif /* defined(__CS_Group_Project__Product__) */

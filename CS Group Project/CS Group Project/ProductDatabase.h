@@ -12,7 +12,8 @@
 #include <iostream>
 #include <iomanip>
 #include "Product.h"
-
+#include <fstream>
+static const int MAXPRODUCT=1000;
 using namespace std;
 
 //Data: an array of pointers (max is 10000) to Product objects, a string for the data file,
@@ -24,12 +25,18 @@ using namespace std;
 class ProductDatabase
 {
 private:
-   Product *product[10000];
+   Product *product[MAXPRODUCT];
    string data_file_ = "";
    static int product_count_;
-
-
+    string ProductID[MAXPRODUCT];
+    double ProductPrice[MAXPRODUCT];
+    int ProductQuantity[MAXPRODUCT];
+    string ProductDescription[MAXPRODUCT];
+    
+    string Products[MAXPRODUCT];
+    
 public:
+    void buildB();
    ProductDatabase():data_file_("products.txt"){}; //default constructor
    ProductDatabase(string file_name):data_file_(file_name){}; //non-default constructor
    ~ProductDatabase() {cout<<"Product Database was destroyed..."<<endl;} //destructor
@@ -37,7 +44,10 @@ public:
    // get/set functions
    static int getProductCount() {return product_count_;}
    static void setProductCount(int product_count) {product_count_=product_count;}
-   void sortDatabase();
+    void sortDatabase();
+    void DisplayProduct();
+    void getProduct();
+    
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */
