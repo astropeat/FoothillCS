@@ -35,3 +35,43 @@ using namespace std;
  Quit
  Please select an option:  1
 */
+IOMSapp::IOMSapp()
+{
+    PD= new ProductDatabase();
+    SS= new SecuritySystem();
+    OD= new OrderDatabase();
+    
+}
+IOMSapp::~IOMSapp()
+{
+    delete PD;
+    delete SS;
+    delete OD;
+    
+}
+void IOMSapp::userauthetication()
+{
+   
+}
+
+void IOMSapp::showmenu()
+{
+    cout<<"1.List All Products"<<endl;
+    cout<<"2.Add New Product"<<endl;
+    cout<<"3.Discontinue a Product"<<endl;
+    cout<<"4.Stocking a Product"<<endl;
+    cout<<"5.Query a Product"<<endl;
+    cout<<"6.View Existing Orders"<<endl;
+    cout<<"7.Process an Order"<<endl;
+    cout<<"Quit"<<endl;
+    cout<<"Please Enter Your Option Here ----->";
+    cin>>option;
+    
+}
+
+void IOMSapp::run()
+{
+    SS->authenticate();
+    
+}
+
