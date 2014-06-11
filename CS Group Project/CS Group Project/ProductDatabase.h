@@ -34,16 +34,20 @@ private:
    int ProductQuantity[MAXPRODUCT];
    string ProductDescription[MAXPRODUCT];
    string Products[MAXPRODUCT];
+    int ProductIndex[MAXPRODUCT*4];
+    
     
 public:
    void buildB();
    ProductDatabase():data_file_("products.txt"){}; //default constructor
    ProductDatabase(string file_name):data_file_(file_name){}; //non-default constructor
    ~ProductDatabase() {cout<<"Product Database was destroyed..."<<endl;} //destructor
-
+    void getproductindex();
    // get/set functions
+    
    static int getProductCount() {return product_count_;}
    static void setProductCount(int product_count) {product_count_=product_count;}
+    void setProductIndex();
    void sortDatabase();
    void addNewProduct(Product *ptr);
    void discontinueProduct(Product *ptr);
