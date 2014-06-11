@@ -25,7 +25,6 @@ void ProductDatabase::buildB(){
    if (myfile.is_open())
    {
        while (myfile.good())
-<<<<<<< HEAD
        {
          getline (myfile,line);
          cout << line << '\n';
@@ -35,30 +34,14 @@ void ProductDatabase::buildB(){
       {
       cin>>Products[i];
       }
-=======
-        {
-           getline (myfile,line);
-           cout << line << '\n';
-       }
-       myfile.close();
-       for (int i=0;i<MAXPRODUCT;i++)
-       {
-           cin>>Products[i];
-       }
 
->>>>>>> FETCH_HEAD
    }
 
    else cout << "Unable to open file";
 }
 
-void ProductDatabase::DisplayProduct()
-{
-<<<<<<< HEAD
+void ProductDatabase::DisplayProduct(){
     for (int i=0;i<MAXPRODUCT;i++)
-=======
-    for (int i=1;i<MAXPRODUCT;i++)
->>>>>>> FETCH_HEAD
     {
     cout<<Products[i]<<endl;
     }
@@ -68,7 +51,7 @@ void ProductDatabase::DisplayProduct()
 //listing (display all product data): invoke a friend function (showProduct)  of Product class
 
 void listAllProductData(Product *object){
-   showProduct(object);
+   object->showProduct();
 }
  
 //Add new Product: add new Product to inventory

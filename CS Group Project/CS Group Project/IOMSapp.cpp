@@ -86,11 +86,8 @@ void IOMSapp::run()
                     PD->DisplayProduct();
                     
                     break;
-<<<<<<< HEAD
-=======
                 default:
                     break;
->>>>>>> FETCH_HEAD
             }
             
         }

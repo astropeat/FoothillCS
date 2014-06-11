@@ -29,27 +29,14 @@ private:
    Product *product[MAXPRODUCT];
    string data_file_ = "";
    static int product_count_;
-<<<<<<< HEAD
    string ProductID[MAXPRODUCT];
    double ProductPrice[MAXPRODUCT];
    int ProductQuantity[MAXPRODUCT];
    string ProductDescription[MAXPRODUCT];
-    
    string Products[MAXPRODUCT];
     
 public:
    void buildB();
-=======
-    string ProductID[MAXPRODUCT];
-    double ProductPrice[MAXPRODUCT];
-    int ProductQuantity[MAXPRODUCT];
-    string ProductDescription[MAXPRODUCT];
-    
-    string Products[MAXPRODUCT];
-    
-public:
-    void buildB();
->>>>>>> FETCH_HEAD
    ProductDatabase():data_file_("products.txt"){}; //default constructor
    ProductDatabase(string file_name):data_file_(file_name){}; //non-default constructor
    ~ProductDatabase() {cout<<"Product Database was destroyed..."<<endl;} //destructor
@@ -57,19 +44,13 @@ public:
    // get/set functions
    static int getProductCount() {return product_count_;}
    static void setProductCount(int product_count) {product_count_=product_count;}
-<<<<<<< HEAD
    void sortDatabase();
    void addNewProduct(Product *ptr);
    void discontinueProduct(Product *ptr);
    void stockProduct(Product *ptr);
    void productQuery(Product *ptr);
    void sortProductDB();
-=======
-    void sortDatabase();
-    void DisplayProduct();
-    void getProduct();
-    
->>>>>>> FETCH_HEAD
+   void DisplayProduct();
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */

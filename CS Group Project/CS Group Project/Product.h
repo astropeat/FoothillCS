@@ -40,16 +40,12 @@ public:
    int getQuantity() {return quantity;}
    string getProduct_description() {return product_description;}
 
-<<<<<<< HEAD
    void showProduct();
-=======
-    void showProduct();
->>>>>>> FETCH_HEAD
    void setproduct_ID(string new_product_ID) {product_ID = new_product_ID;}
    void setPrice(double new_price) {price = new_price;}
    void setQuantity(int new_quantity) {quantity = new_quantity;}
    void setProduct_description(string new_product_description) {
-      product_description = new_product_description;
+   product_description = new_product_description;
    }
 
    // Also provide a friend function (showProduct) for this class that will output all Product information.
