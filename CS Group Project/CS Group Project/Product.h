@@ -9,6 +9,7 @@
 #ifndef __CS_Group_Project__Product__
 #define __CS_Group_Project__Product__
 
+
 #include <iostream>
 #include <iomanip>
 
@@ -40,7 +41,7 @@ public:
    int getQuantity() {return quantity;}
    string getProduct_description() {return product_description;}
 
-   void showProduct();
+   friend void showProduct(const Product&);
    void setproduct_ID(string new_product_ID) {product_ID = new_product_ID;}
    void setPrice(double new_price) {price = new_price;}
    void setQuantity(int new_quantity) {quantity = new_quantity;}
@@ -53,6 +54,8 @@ public:
 
    
 };
+
+
 
 
 
