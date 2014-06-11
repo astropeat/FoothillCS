@@ -23,6 +23,7 @@ using namespace std;
 
 class ProductDatabase
 {
+   friend class Product;
 private:
    Product *product[10000];
    string data_file_ = "";
@@ -38,6 +39,12 @@ public:
    static int getProductCount() {return product_count_;}
    static void setProductCount(int product_count) {product_count_=product_count;}
    void sortDatabase();
+   void addNewProduct(Product *ptr);
+   void discontinueProduct(Product *ptr);
+   void stockProduct(Product *ptr);
+   void productQuery(Product *ptr);
+   void sortProductDB();
+   
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */
