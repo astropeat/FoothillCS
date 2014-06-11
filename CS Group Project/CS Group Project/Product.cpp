@@ -6,18 +6,20 @@
 //  Copyright (c) 2014 Katrina Bugyi. All rights reserved.
 //
 
+
+
 #include "Product.h"
 
-
-void Product::showProduct()
+void showProduct(const Product& p)
 {
    cout << "Product:" << endl;
-   cout << "  ID: " << product_ID << endl;
-   cout << "  Price: " << price << endl;
-   cout << "  Quantity: " << quantity << endl;
-   cout << "  Description: "<< product_description << endl;
+   cout << "  ID: " << p.product_ID << endl;
+   cout << "  Price: " << p.price << endl;
+   cout << "  Quantity: " << p.quantity << endl;
+   cout << "  Description: "<< p.product_description << endl;
    //...
 }
+
 
 /*
 

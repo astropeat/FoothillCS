@@ -7,7 +7,6 @@
 //
 
 #include "ProductDatabase.h"
-#include "Product.cpp"
 #include "Product.h"
 #include <iostream>
 #include <fstream>
@@ -51,7 +50,7 @@ void ProductDatabase::DisplayProduct(){
 //listing (display all product data): invoke a friend function (showProduct)  of Product class
 
 void listAllProductData(Product *object){
-   object->showProduct();
+   //showProduct();
 }
  
 //Add new Product: add new Product to inventory
