@@ -7,7 +7,6 @@
 //
 
 #include "ProductDatabase.h"
-#include "Product.cpp"
 #include "Product.h"
 #include <iostream>
 #include <fstream>
