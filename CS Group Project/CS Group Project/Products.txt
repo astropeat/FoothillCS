@@ -1,6 +1,3 @@
 2357#Sony LED TV 46 inch#859.95#145
-<<<<<<< HEAD
-21
-=======
 3589#Samsung Galaxy 5#259.99#239
->>>>>>> FETCH_HEAD
+
