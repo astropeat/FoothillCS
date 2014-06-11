@@ -10,13 +10,19 @@
 #define __Lab_5__FruitStation__
 
 #include <iostream>
+#include "Fruit.h"
 
+class  FruitStation{
+private:
+   //Private data members: an array of pointers to Fruit objects (max of 64 pointers)
+   //an integer named size to keep track of the number of Fruit objects actually stored in the array
+   Fruit *fruit[64];
+   int size;
+   
+public:
 
-/*
- class  FruitStation
+ /*
 
- Private data members: an array of pointers to Fruit objects (max of 64 pointers), 
- an integer named size to keep track of the number of Fruit objects actually stored in the array
  
  Constructors:
  Default constructor: initialize all pointers to NULL
@@ -40,5 +46,6 @@
  
  
 */
+};
 
 #endif /* defined(__Lab_5__FruitStation__) */

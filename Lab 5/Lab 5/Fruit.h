@@ -10,36 +10,55 @@
 #define __Lab_5__Fruit__
 
 #include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+class Fruit{
+private:
+   //Private data members: fruit name (a pointer to character), weight (in lbs), unit price
+   char *name_;
+   double weight_;
+   double unit_price_;
+
+   //Private static field: tax (8.50%)
+   constexpr static double tax = 0.085;
+public:
+   //Constructors:
+   //Default constructor: set everything to 0 or NULL (for pointer)
+   Fruit() : name_ (NULL), weight_ (0), unit_price_ (0){};
+
+   //Non-default constructor: declare here
+   Fruit(char* name, double weight, double unit_price);
+
+
+   //Fix destroyer
+   //Destructor: output a message “Destroyed Fruit …., quantity = ….”
+   //and then free memory for the fruit name data
+   ~Fruit(){ cout << "Destroyed Fruit, quantity" << endl;};
+
+
+   //Copy Constructor: declare here
+   Fruit(const Fruit &other);
+ 
+   //Public functions:
+   //get/set functions for all data. Note fruit name is a pointer.
+   //get weight
+
+   //get unit price
+
+   //get name
+
+   //You must do dynamic memory allocation for the setFruitName function
+ 
+   //static function getTax that returns the static tax field
+ 
+   //Note: You may declare fruit name as a string thus no need to provide a copy constructor for the class.
+   //In this case you will lose 10 points for not implementing pointer for this data.
+   //In fact I recommend you implement it this way first to get your program going.
+   //If you have time then provide pointer implementation later to get full credit.
 
 
 
-/*
- class Fruit
-
- Private data members: fruit name (a pointer to character), weight (in lbs), unit price
- Private static field: tax (8.50%)
- 
- Constructors:
- Default constructor: set everything to 0 or NULL (for pointer)
- Non-default constructor: take a character array (char [ ] ) and two doubles to initialize the Fruit’s data. 
- You must dynamically allocate memory for the fruit name data
- 
- Copy constructor: provide a copy constructor as this class has pointers as data members 
- (In fact all classes defined here have pointers as data members and need to have copy constructors. 
-  I just didn’t ask you to do it for OnlineSuperMaqrket and FruitStation classes)
- 
- Destructor: output a message “Destroyed Fruit …., quantity = ….” 
- and then free memory for the fruit name data
- 
- Public functions:
- get/set functions for all data. Note fruit name is a pointer. 
- You must do dynamica memory allocation for the setFruitName function
- 
- static function getTax that returns the static tax field
- 
- Note: You may declare fruit name as a string thus no need to provide a copy constructor for the class. In this case you will lose 10 points for not implementing pointer for this data. In fact I recommend you implement it this way first to get your program going.
- If you have time then provide pointer implementation later to get full credit.
- 
- 
- */
+};
 #endif /* defined(__Lab_5__Fruit__) */
