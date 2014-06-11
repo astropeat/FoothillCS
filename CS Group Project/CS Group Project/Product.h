@@ -29,7 +29,7 @@ public:
    Product() : product_ID(""), price(0), quantity(0), product_description("") {};
 
    Product(string product_ID, double price, int quantity, string product_description)
-   : product_ID(""), price(0), quantity(0), product_description("")
+   : product_ID(product_ID), price(price), quantity(quantity), product_description(product_description)
    {};
 
    //destructor

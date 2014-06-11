@@ -10,8 +10,9 @@
 #include "Product.h"
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
-
+using namespace std;
 
 
 //Functions:
@@ -24,11 +25,44 @@ void ProductDatabase::buildB()
    ifstream myfile ("Products.txt");
    if (myfile.is_open())
    {
-       for (int i=0;i<MAXPRODUCT;i++)
-       {
-           myfile>>Products[i];
-       }
-       
+      while (getline(myfile, line)){
+         cout << line << endl;
+         stringstream ss(line);
+         stringstream ss2;
+         string part;
+
+         // read id
+         getline(ss, part, '#');
+         cout << part << endl;
+         string product_id = part;
+
+         // read description
+         getline(ss, part, '#');
+         cout << part << endl;
+
+         string description = part;
+
+         // read price
+         getline(ss, part, '#');
+         cout << part << endl;
+
+         ss2.str(part);
+         double price;
+         ss2 >> price;
+
+         // read quantity
+         getline(ss, part, '#');
+         cout << part << endl;
+
+         ss2.str(part);
+         int quantity;
+         ss2 >> quantity;
+
+         cout << product_id << ", " << price << ", " << quantity << ", " << description << endl;
+         product[product_count_]= new Product(product_id, price, quantity, description);
+         product_count_ +=1;
+
+      }
    }
 
    else cout << "Unable to open file";
@@ -36,10 +70,9 @@ void ProductDatabase::buildB()
 
 void ProductDatabase::DisplayProduct()
 {
-    for (int i=0;i<MAXPRODUCT;i++)
+    for (int i=0;i<product_count_;i++)
     {
-       
-    cout<<Products[i]<<endl;
+       showProduct(*product[i]);
        // if (Products[i]=0))
     }
     
