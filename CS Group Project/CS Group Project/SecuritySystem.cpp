@@ -17,29 +17,57 @@
 
 
 
-int SecuritySystem::checkusername(string inputusername){
-  for (int x=0;x<MAXCOUNT;x++)
-  {
-    if (username[x]==inputusername)
-    {
-      index=x;
-      //return this on success
-      return 0;
-    }
-  }
-   cout << "Unable to authenticate" << endl;
-   
-  return -1;//return this on failure
-}
+bool SecuritySystem::authenticate() {
+   for (int maxtries = 0; maxtries < 3; maxtries++){
+      string entered_username;
+      string entered_password;
+
+      cout << "\t\t\tIOMS Authentication\n\n" << endl;
+      cout << "Enter user name:\t"; cin >> entered_username;
+      cout << "\nEnter password:\t"; cin >> entered_password;
+
+      for (int i=0; i < MAXCOUNT3; i++){
+         if (this->accounts[i].getUsername() == entered_username)
+         {
+            if (this->accounts[i].getPassword() == entered_password)
+            {
+               return true;
+            }
+            cout << "Failed to Authenticate" << endl;
+            return false;
+         }
+      }
+      cout << "Failed to Authenticate" << endl;
+   }
+   //try three times then return false
+   return false;
+};
 
 
-int SecuritySystem::checkpassword(string inputpassword){
-  if(inputpassword==password[index])
-  {
-    cout << "User Authenticated" << endl;
-    return 0;
-  }
-   cout << "Unable to authenticate" << endl;
-   //failure
-   return -1;
-}
+/*int SecuritySystem::checkusername(string inputusername){
+ for (int x=0;x<MAXCOUNT;x++)
+ {
+ if (username[x]==inputusername)
+ {
+ index=x;
+ //return this on success
+ return 0;
+ }
+ }
+ cout << "Unable to authenticate" << endl;
+
+ return -1;//return this on failure
+ }
+
+
+ int SecuritySystem::checkpassword(string inputpassword){
+ if(inputpassword==password[index])
+ {
+ cout << "User Authenticated" << endl;
+ return 0;
+ }
+ cout << "Unable to authenticate" << endl;
+ //failure
+ return -1;
+ }
+ */

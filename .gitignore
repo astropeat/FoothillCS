@@ -2,3 +2,49 @@
 CS Group Project/CS Group Project/main.cpp
 
 CS Group Project/CS Group Project/main.cpp
+
+*.xcbkptlist
+
+Lab 5/Lab 5.xcodeproj/project.pbxproj
+
+Lab 5/Lab 5.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+Lab 5/Lab 5.xcodeproj/project.xcworkspace/xcshareddata/Lab 5.xccheckout
+
+Lab 5/Lab 5.xcodeproj/project.xcworkspace/xcuserdata/kbugyi.xcuserdatad/UserInterfaceState.xcuserstate
+
+Lab 5/Lab 5.xcodeproj/xcuserdata/kbugyi.xcuserdatad/xcschemes/Lab 5.xcscheme
+
+Lab 5/Lab 5.xcodeproj/xcuserdata/kbugyi.xcuserdatad/xcschemes/xcschememanagement.plist
+
+Lab 5/Lab 5/Fruit.cpp
+
+Lab 5/Lab 5/Fruit.h
+
+Lab 5/Lab 5/FruitStation.cpp
+
+Lab 5/Lab 5/FruitStation.h
+
+Lab 5/Lab 5/Lab_5.1
+
+Lab 5/Lab 5/main.cpp
+
+Lab 5/Lab 5/OnlineSuperMarket.cpp
+
+Lab 5/Lab 5/OnlineSuperMarket.h
+
+w10c1/w10c1.xcodeproj/project.pbxproj
+
+w10c1/w10c1.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+w10c1/w10c1.xcodeproj/project.xcworkspace/xcshareddata/w10c1.xccheckout
+
+w10c1/w10c1.xcodeproj/project.xcworkspace/xcuserdata/kbugyi.xcuserdatad/UserInterfaceState.xcuserstate
+
+w10c1/w10c1.xcodeproj/xcuserdata/kbugyi.xcuserdatad/xcschemes/w10c1.xcscheme
+
+w10c1/w10c1.xcodeproj/xcuserdata/kbugyi.xcuserdatad/xcschemes/xcschememanagement.plist
+
+w10c1/w10c1/main.cpp
+
+w10c1/w10c1/w10c1.1

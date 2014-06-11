@@ -1,6 +1,6 @@
 //============================================================================
 // File Name   : CS Group Project.cpp
-// Author      : Katrina Bugyi, Jason Ng, Jose Parente, Sarah R
+// Author      : Katrina Bugyi, Jason Ng, Jose Parente, Sarah Romaniuk, Anthony Moore
 // Copyright   : Your copyright notice
 // Description : Lab 3 Foothill C++
 // Revision History:
@@ -11,12 +11,12 @@
 #include <iostream>
 #include <iomanip> 
 #include <cmath>
-
+#include "IOMSapp.h"
 using namespace std;
 
 int main()
 {
-   cout << "here is where we put the code" << endl;
-   return 0;
+    IOMSapp OBJ;
+    OBJ.run();
 }
 

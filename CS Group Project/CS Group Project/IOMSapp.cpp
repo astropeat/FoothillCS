@@ -35,3 +35,61 @@ using namespace std;
  Quit
  Please select an option:  1
 */
+IOMSapp::IOMSapp()
+{
+    PD= new ProductDatabase();
+    SS= new SecuritySystem();
+    OD= new OrderDatabase();
+    
+}
+IOMSapp::~IOMSapp()
+{
+    delete PD;
+    delete SS;
+    delete OD;
+    
+}
+void IOMSapp::welcomemessage()
+{
+    cout<<setw(6)<<setfill('*')<<"Welcome to Inventory and Ordering Management System (IOMS) "<<endl;
+    cout<<"*************************************************"<<endl;
+}
+
+void IOMSapp::showmenu()
+{
+    cout<<"1.List All Products"<<endl;
+    cout<<"2.Add New Product"<<endl;
+    cout<<"3.Discontinue a Product"<<endl;
+    cout<<"4.Stocking a Product"<<endl;
+    cout<<"5.Query a Product"<<endl;
+    cout<<"6.View Existing Orders"<<endl;
+    cout<<"7.Process an Order"<<endl;
+    cout<<"8.Quit"<<endl;
+    cout<<"Please Enter Your Option Here ----->";
+    cin>>option;
+    
+}
+
+void IOMSapp::run()
+{
+    if (SS->authenticate()==true)
+    {
+        option=0;
+        while (option!=8)
+        {
+            welcomemessage();
+            showmenu();
+            switch (option)
+            {
+                case 1:
+                    PD->buildB();
+                    PD->DisplayProduct();
+                    
+                    break;
+            }
+            
+        }
+    }
+    
+}
+
