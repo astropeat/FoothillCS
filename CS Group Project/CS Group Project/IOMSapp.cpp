@@ -86,6 +86,8 @@ void IOMSapp::run()
                     PD->DisplayProduct();
                     
                     break;
+                default:
+                    break;
             }
             
         }

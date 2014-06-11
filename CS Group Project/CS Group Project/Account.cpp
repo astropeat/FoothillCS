@@ -8,8 +8,6 @@
 
 #include "Account.h"
 
-
-
 Account::Account() : user_name_(""), password_("") {};
 
 // The equivalent code is this:
@@ -20,4 +18,8 @@ Account::Account() : user_name_(""), password_("") {};
 //};
 Account::Account(string user_name, string password)
 : user_name_(user_name), password_(password)
-{};
+{
+
+
+
+};

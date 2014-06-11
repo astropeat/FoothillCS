@@ -23,18 +23,15 @@ void ProductDatabase::buildB(){
    if (myfile.is_open())
    {
        while (myfile.good())
-       {
-           for (int i=0;i<MAXPRODUCT;i++)
-           {
-               while ( getline (myfile,line) )
-               {
-           
-                   cout << line << '\n';
-                   cin>>Products[i];
-               }
-           }
+        {
+           getline (myfile,line);
+           cout << line << '\n';
        }
        myfile.close();
+       for (int i=0;i<MAXPRODUCT;i++)
+       {
+           cin>>Products[i];
+       }
 
    }
    else cout << "Unable to open file";
@@ -42,7 +39,7 @@ void ProductDatabase::buildB(){
 
 void ProductDatabase::DisplayProduct()
 {
-    for (int i=0;i<MAXPRODUCT;i++)
+    for (int i=1;i<MAXPRODUCT;i++)
     {
     cout<<Products[i]<<endl;
     }
