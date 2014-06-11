@@ -18,31 +18,29 @@
 //buildDB: reading text file to load product data into database which is an array then call the sort
 //function to sort it by product ID.
 
-void ProductDatabase::buildB(){
+void ProductDatabase::buildB()
+{
    string line;
    ifstream myfile ("Products.txt");
    if (myfile.is_open())
    {
-       while (myfile.good())
+       for (int i=0;i<MAXPRODUCT;i++)
        {
-         getline (myfile,line);
-         cout << line << '\n';
+           myfile>>Products[i];
        }
-      myfile.close();
-      for (int i=0;i<MAXPRODUCT;i++)
-      {
-      cin>>Products[i];
-      }
-
+       
    }
 
    else cout << "Unable to open file";
 }
 
-void ProductDatabase::DisplayProduct(){
+void ProductDatabase::DisplayProduct()
+{
     for (int i=0;i<MAXPRODUCT;i++)
     {
+       
     cout<<Products[i]<<endl;
+       // if (Products[i]=0))
     }
     
 }
@@ -84,7 +82,28 @@ void ProductDatabase::productQuery(Product product[]){
 void ProductDatabase::sortProductDB(){
 
 }
- 
+//locate all the hashtags
+void ProductDatabase::setProductIndex()
+{
+    
+    cout<<"Damn"<<endl;
+    for (int i=0;i<MAXPRODUCT;i++)
+    {
+        for (int x=0;x<Products[i].length();x++)
+        {
+            ProductIndex[i]=Products[i].at(x);
+            
+        }
+    }
+}
+void ProductDatabase::getproductindex()
+{   cout<<ProductIndex[1];
+    /*for (int i=0;i<MAXPRODUCT*4;i++)
+    {
+        cout<<ProductIndex[i]<<endl;
+    }*/
+}
+
 //getProduct: return a pointer to a Product given a product pointer
 
 
