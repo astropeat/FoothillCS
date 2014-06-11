@@ -43,11 +43,10 @@ public:
  
    //Public functions:
    //get/set functions for all data. Note fruit name is a pointer.
-   //get weight
-
-   //get unit price
-
-   //get name
+   double get_weight(){return weight_;}
+   void set_weight(double new_set_weight){weight_ = new_set_weight;}
+   double get_unit_price(){return unit_price_;}
+   void set_unit_price(double new_unit_price) {unit_price_ = new_unit_price;};
 
    //You must do dynamic memory allocation for the setFruitName function
  
