@@ -50,9 +50,9 @@ public:
    void setProductIndex();
    void sortDatabase();
    void addNewProduct(Product *ptr);
-   void discontinueProduct(Product *ptr);
-   void stockProduct(Product *ptr);
-   void productQuery(Product *ptr);
+   void discontinueProduct(string);
+   void stockProduct(string, int);
+   void productQuery(string);
    void sortProductDB();
    void DisplayProduct();
 };

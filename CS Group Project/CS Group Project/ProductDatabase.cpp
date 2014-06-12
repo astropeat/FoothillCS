@@ -73,14 +73,15 @@ void ProductDatabase::DisplayProduct()
     for (int i=0;i<product_count_;i++)
     {
        showProduct(*product[i]);
-       // if (Products[i]=0))
+       //if (Products[i]=0)
     }
-    
+
 }
 
 //listing (display all product data): invoke a friend function (showProduct)  of Product class
 
 void listAllProductData(Product *object){
+   //for (int i=0; i<product_count_; i++)
    //showProduct();
 }
  
@@ -93,21 +94,33 @@ void ProductDatabase::addNewProduct(Product product[]){
  
 //Discontinue Product: delete a discontinued Product (delete by Product ID)
 
-void ProductDatabase::discontinueProduct(Product product[]){
-   
+void ProductDatabase::discontinueProduct(string Product_ID_){
+   for(int i=0; i<product_count_; i++){
+      if (product[i]->product_ID==Product_ID_){
+         delete &product[i];
+      }
+   }
 }
  
 //Stocking a Product: add more quantity to a Product
 
-void ProductDatabase::stockProduct(Product product[]){
-   
+void ProductDatabase::stockProduct(string Product_ID_, int QTY){
+   for(int i=0; i<product_count_; i++){
+      if (product[i]->product_ID==Product_ID_){
+         product[i]->setQuantity(QTY);
+      }
+   }
 }
  
  
 //Query a Product: display all information on a Product given a Product Id
 
-void ProductDatabase::productQuery(Product product[]){
-
+void ProductDatabase::productQuery(string Product_ID_){
+   for(int i=0; i<product_count_; i++){
+      if(product[i]->product_ID==Product_ID_){
+         showProduct(*product[i]);
+      }
+   }
 }
  
 //sort: sort the Product database by product ID

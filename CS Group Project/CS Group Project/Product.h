@@ -48,7 +48,7 @@ public:
    void setProduct_description(string new_product_description) {
    product_description = new_product_description;
    }
-
+   friend class ProductDatabase;
    // Also provide a friend function (showProduct) for this class that will output all Product information.
    // Make sure to define the correct parameter required for this function.
 
