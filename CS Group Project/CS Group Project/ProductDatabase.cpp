@@ -87,10 +87,18 @@ void listAllProductData(Product *object){
  
 //Add new Product: add new Product to inventory
 
-void ProductDatabase::addNewProduct(Product product[]){
-   ;
+void ProductDatabase::addNewProduct(){
+   string new_ID;
+   double new_Price;
+   int new_QTY;
+   string new_description;
+   cout<<"Please enter the new product's ID: \n"; getline(cin, new_ID); cout<<endl;
+   cout<<"Please enter the new product's Price: \n"; cin>>new_Price; cout<<endl;
+   cout<<"Please enter the quantity of new products: \n"; cin>>new_QTY; cout<<endl;
+   cout<<"Please enter a short description of the new product: \n"; getline(cin, new_description);
+   cout<<endl;
 }
- 
+
  
 //Discontinue Product: delete a discontinued Product (delete by Product ID)
 

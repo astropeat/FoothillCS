@@ -49,7 +49,7 @@ public:
    void setProductCount(int product_count) {product_count_=product_count;}
    void setProductIndex();
    void sortDatabase();
-   void addNewProduct(Product *ptr);
+   void addNewProduct();
    void discontinueProduct(string);
    void stockProduct(string, int);
    void productQuery(string);
