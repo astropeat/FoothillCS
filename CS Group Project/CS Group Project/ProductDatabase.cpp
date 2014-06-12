@@ -94,9 +94,11 @@ void ProductDatabase::addNewProduct(){
     cout<<endl;
    cout<<"Please enter the quantity of new products: \n";
     cin>>new_QTY; cout<<endl;
-   cout<<"Please enter a short description of the new product: \n"; getline(cin, new_description);
+   cout<<"Please enter a short description of the new product: \n";
+    cin>>new_description;
    cout<<endl;
-   for(int i; i<product_count_; i++){
+   for(int i; i<product_count_; i++)
+   {
       if(product[i]->product_ID!=new_ID)
       {
          int*ip;
@@ -109,6 +111,7 @@ void ProductDatabase::addNewProduct(){
 
  
 //Discontinue Product: delete a discontinued Product (delete by Product ID)
+
 
 void ProductDatabase::discontinueProduct(string Product_ID_){
    for(int i=0; i<product_count_; i++){
