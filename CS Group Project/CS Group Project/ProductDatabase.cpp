@@ -26,39 +26,33 @@ void ProductDatabase::buildB()
    if (myfile.is_open())
    {
       while (getline(myfile, line)){
-         cout << line << endl;
+         //cout << line << endl;
          stringstream ss(line);
          stringstream ss2;
          string part;
 
          // read id
          getline(ss, part, '#');
-         cout << part << endl;
          string product_id = part;
 
          // read description
          getline(ss, part, '#');
-         cout << part << endl;
-
          string description = part;
 
          // read price
          getline(ss, part, '#');
-         cout << part << endl;
-
+         
          ss2.str(part);
          double price;
          ss2 >> price;
 
          // read quantity
          getline(ss, part, '#');
-         cout << part << endl;
-
+         
          ss2.str(part);
          int quantity;
          ss2 >> quantity;
-
-         cout << product_id << ", " << price << ", " << quantity << ", " << description << endl;
+          
          product[product_count_]= new Product(product_id, price, quantity, description);
          product_count_ +=1;
 
@@ -92,13 +86,19 @@ void ProductDatabase::addNewProduct(){
    double new_Price;
    int new_QTY;
    string new_description;
-   cout<<"Please enter the new product's ID: \n"; getline(cin, new_ID); cout<<endl;
-   cout<<"Please enter the new product's Price: \n"; cin>>new_Price; cout<<endl;
-   cout<<"Please enter the quantity of new products: \n"; cin>>new_QTY; cout<<endl;
+   cout<<"Please enter the new product's ID: \n";
+    cin>>new_ID;
+    cout<<endl;
+   cout<<"Please enter the new product's Price: \n";
+    cin>>new_Price;
+    cout<<endl;
+   cout<<"Please enter the quantity of new products: \n";
+    cin>>new_QTY; cout<<endl;
    cout<<"Please enter a short description of the new product: \n"; getline(cin, new_description);
    cout<<endl;
    for(int i; i<product_count_; i++){
-      if(product[i]->product_ID!=new_ID){
+      if(product[i]->product_ID!=new_ID)
+      {
          int*ip;
          Product *new_product;
          ip=new int;

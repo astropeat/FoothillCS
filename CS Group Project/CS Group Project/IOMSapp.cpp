@@ -84,8 +84,12 @@ void IOMSapp::run()
                 case 1:
                     PD->buildB();
                     PD->DisplayProduct();
-                    
                     break;
+                case 2:
+                {
+                    PD->addNewProduct();
+                    
+                }
                 default:
                     break;
             }
