@@ -97,6 +97,14 @@ void ProductDatabase::addNewProduct(){
    cout<<"Please enter the quantity of new products: \n"; cin>>new_QTY; cout<<endl;
    cout<<"Please enter a short description of the new product: \n"; getline(cin, new_description);
    cout<<endl;
+   for(int i; i<product_count_; i++){
+      if(product[i]->product_ID!=new_ID){
+         int*ip;
+         Product *new_product;
+         ip=new int;
+         new_product=new Product(new_ID, new_Price, new_QTY, new_description);
+      }
+   }
 }
 
  
@@ -165,3 +173,10 @@ void ProductDatabase::getproductindex()
  
 //resetDB: free all pointers if they’re not NULL
 
+void ProductDatabase::resetDB(){
+   for(int i; i<product_count_; i++){
+      if(product[i]!=NULL){
+         delete product[i];
+      }
+   }
+}

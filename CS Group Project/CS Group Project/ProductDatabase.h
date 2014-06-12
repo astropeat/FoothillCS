@@ -55,6 +55,7 @@ public:
    void productQuery(string);
    void sortProductDB();
    void DisplayProduct();
+   void resetDB();
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */
