@@ -20,22 +20,23 @@ using namespace std;
 
 class IOMSapp
 {
+private:
+   SecuritySystem *SS;
+   ProductDatabase *PD;
+   OrderDatabase *OD;
+
+   int option;
+   void displaymessage();
+   void welcomemessage();
+   void showmenu();
+
   public:
     IOMSapp();
     ~IOMSapp();
-    void displaymessage();
-    void welcomemessage();
-    void showmenu();
-   
+    bool authenticate();
     void initialize_database();
     void run();
-    void process_order();
-  private:
-    SecuritySystem *SS;
-    ProductDatabase *PD;
-    OrderDatabase *OD;
-    
-    int option;
+    void process_order(); // FIXME: does this exist?
     
 };
 #endif /* defined(__CS_Group_Project__IOMSapp__) */

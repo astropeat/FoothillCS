@@ -1,2 +1,4 @@
+1111#Legos#5.00#1001
+1234#Macbook Pro#2000.00#3
 2357#Sony LED TV 46 inch#859.95#145
 3589#Samsung Galaxy 5#259.99#239

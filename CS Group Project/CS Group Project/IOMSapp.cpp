@@ -21,38 +21,30 @@ using namespace std;
  For Process Order option: ask user input for an order ID. Invoke getProductID from Order database class based on the order ID. Invoke getProduct from ProductDatabase to get a pointer to a Product object. Now invoke process order from that Product pointer. If the process order return true invoke clear from the Order
 */
 
-
-
-/* Main Menu
-
- List All Products
- Add new Product
- Discontinue a Product
- Stocking a Product
- Query a Product
- View existing Orders
- Process an Order
- Quit
- Please select an option:  1
-*/
 IOMSapp::IOMSapp()
 {
     PD= new ProductDatabase();
     SS= new SecuritySystem();
     OD= new OrderDatabase();
-    
 }
+
 IOMSapp::~IOMSapp()
 {
     delete PD;
     delete SS;
     delete OD;
-    
 }
+
+void IOMSapp::initialize_database()
+{
+   PD->buildB();
+   // TODO: Initialize order database
+}
+
 void IOMSapp::welcomemessage()
 {
-    cout<<setw(6)<<setfill('*')<<"Welcome to Inventory and Ordering Management System (IOMS) "<<endl;
-    cout<<"*************************************************"<<endl;
+    cout<<setw(6)<<setfill('*')<<"\nWelcome to Inventory and Ordering Management System (IOMS) "<<endl;
+    cout<<"*************************************************\n"<<endl;
 }
 
 void IOMSapp::showmenu()
@@ -70,65 +62,61 @@ void IOMSapp::showmenu()
     
 }
 
+bool IOMSapp::authenticate(){
+   return SS->authenticate();
+}
+
 void IOMSapp::run()
 {
-    if (SS->authenticate()==true)
-    {
-        int x= 0;
-        option=0;
-        while (option!=8)
-        {
-            welcomemessage();
-            showmenu();
-            switch (option)
-            {
-                case 1:
-                    while (x==0){
-                        PD->buildB();
-                        x++;
-                    
-                    }
-                    PD->DisplayProduct();
-                    break;
-                case 2:
-                {
-                    PD->addNewProduct();
-                    break;
-                }
-                    
-                case 3:
-                {
-                    cout<<"Enter the Product"<<endl;
-                    string id;
-                    cin>>id;
-                    PD->discontinueProduct(id);
-                    break;
-                }
-                case 4:
-                {
-                    cout<<"Enter the Product ID"<<endl;
-                    string productid;
-                    cin>>productid;
-                    cout<<"How much would you like to add?"<<endl;
-                    int add;
-                    cin>>add;
-                    PD->stockProduct(productid, add);
-                    break;
-                }
-                case 5:
-                {
-                    string prdid;
-                    cout<<"Enter Product Id---->";
-                    cin>>prdid;
-                    PD->productQuery(prdid);
-                    break;
-                }
-                default:
-                    break;
-            }
-            
-        }
-    }
-    
+   option=0;
+   while (option!=8)
+   {
+      welcomemessage();
+      showmenu();
+      switch (option)
+      {
+         case 1:
+            PD->DisplayProducts();
+            break;
+         case 2:
+         {
+            PD->addNewProduct();
+            break;
+         }
+
+         case 3:
+         {
+            cout<<"Enter the Product ID: "<<endl;
+            string id;
+            cin>>id;
+            PD->discontinueProduct(id);
+            break;
+         }
+
+         case 4:
+         {
+            cout<<"Enter the Product ID: "<<endl;
+            string productid;
+            cin>>productid;
+            cout<<"How much would you like to add?"<<endl;
+            int add;
+            cin>>add;
+            PD->stockProduct(productid, add);
+            break;
+         }
+
+         case 5:
+         {
+            string prdid;
+            cout<<"Enter the Product ID: ";
+            cin>>prdid;
+            PD->productQuery(prdid);
+            break;
+         }
+
+         default:
+            break;
+      }
+   }
 }
 

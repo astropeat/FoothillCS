@@ -26,7 +26,7 @@ public:
     Account(string user_name, string password);
 
     // Destructor
-   ~Account() {};
+   ~Account() {cout << "Account destroyed..." << endl;};
 
    string getUsername() {return user_name_;}
    void setUsername(string user_name) {this->user_name_ = user_name;}

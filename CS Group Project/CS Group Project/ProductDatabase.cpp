@@ -23,7 +23,7 @@ using namespace std;
 void ProductDatabase::buildB()
 {
    string line;
-   ifstream myfile ("Products.txt");
+   ifstream myfile (data_file_);
    if (myfile.is_open())
    {
       while (getline(myfile, line)){
@@ -56,48 +56,49 @@ void ProductDatabase::buildB()
           
          product[product_count_]= new Product(product_id, price, quantity, description);
          product_count_ +=1;
-
       }
    }
-
-   else cout << "Unable to open file";
+   else cout << "Unable to open file " << data_file_ << endl;
 }
 
-void ProductDatabase::DisplayProduct()
+//listing (display all product data): invoke a friend function (showProduct)  of Product class
+void ProductDatabase::DisplayProducts()
 {
     for (int i=0;i<product_count_;i++)
     {
        showProduct(*product[i]);
-       //if (Products[i]=0)
     }
-
 }
 
-//listing (display all product data): invoke a friend function (showProduct)  of Product class
 
-void listAllProductData(Product *object){
-   //for (int i=0; i<product_count_; i++)
-   //showProduct();
-}
  
 //Add new Product: add new Product to inventory
-
 void ProductDatabase::addNewProduct(){
    string new_ID;
    double new_Price;
    int new_QTY;
    string new_description;
+
    cout<<"Please enter the new product's ID: \n";
     cin>>new_ID;
     cout<<endl;
+
    cout<<"Please enter the new product's Price: \n";
     cin>>new_Price;
     cout<<endl;
+
    cout<<"Please enter the quantity of new products: \n";
-    cin>>new_QTY; cout<<endl;
+    cin>>new_QTY;
+    cout<<endl;
+
    cout<<"Please enter a short description of the new product: \n";
     cin>>new_description;
-   cout<<endl;
+    cout<<endl;
+
+   // TODO:
+   // add new product to product array
+   // if product ID exists do not add product
+   // if it has more than maximum number of product do not add
    for(int i; i<product_count_; i++)
    {
       if(product[i]->product_ID!=new_ID)
@@ -112,15 +113,15 @@ void ProductDatabase::addNewProduct(){
 
  
 //Discontinue Product: delete a discontinued Product (delete by Product ID)
-
-
 void ProductDatabase::discontinueProduct(string Product_ID_){
+   // FIXME: shuffle
    for(int i=0; i<product_count_; i++){
       if (product[i]->product_ID==Product_ID_)
       {
          delete product[i];
       }
    }
+   // FIXME: product not found?
 }
  
 //Stocking a Product: add more quantity to a Product
@@ -128,60 +129,53 @@ void ProductDatabase::discontinueProduct(string Product_ID_){
 void ProductDatabase::stockProduct(string Product_ID_, int QTY){
    for(int i=0; i<product_count_; i++){
       if (product[i]->product_ID==Product_ID_){
-         product[i]->setQuantity(QTY);
+         product[i]->addQuantity(QTY);
       }
    }
+   // FIXME: product not found?
 }
  
  
 //Query a Product: display all information on a Product given a Product Id
 
 void ProductDatabase::productQuery(string Product_ID_){
-   for(int i=0; i<product_count_; i++){
-      if(product[i]->product_ID==Product_ID_){
-         showProduct(*product[i]);
-      }
+   Product * p = getProduct(Product_ID_);
+   if (p != NULL){
+      showProduct(*p);
    }
 }
  
 //sort: sort the Product database by product ID
 
 void ProductDatabase::sortProductDB(){
-
-}
-//locate all the hashtags
-void ProductDatabase::setProductIndex()
-{
-    
-    cout<<"Damn"<<endl;
-    for (int i=0;i<MAXPRODUCT;i++)
-    {
-        for (int x=0;x<Products[i].length();x++)
-        {
-            ProductIndex[i]=Products[i].at(x);
-            
-        }
-    }
-}
-void ProductDatabase::getproductindex()
-{   cout<<ProductIndex[1];
-    /*for (int i=0;i<MAXPRODUCT*4;i++)
-    {
-        cout<<ProductIndex[i]<<endl;
-    }*/
+   //FIXME: implement this 
 }
 
-//getProduct: return a pointer to a Product given a product pointer
 
+//getProduct: return a pointer to a Product given a product ID
+Product* ProductDatabase::getProduct(string ProductID){
+   //FIXME: implement this
+   for(int i=0; i<product_count_; i++){
+      if(product[i]->product_ID==ProductID){
+         return product[i];
+      }
+   }
+   cout << "Product ID " << ProductID <<  " not found." << endl;
+   return NULL;
+}
 
 
  
 //resetDB: free all pointers if they’re not NULL
-
-void ProductDatabase::resetDB(){
-   for(int i; i<product_count_; i++){
+void ProductDatabase::resetDB()
+{
+   for(int i; i<product_count_; i++)
+   {
       if(product[i]!=NULL){
          delete product[i];
+         product[i] = NULL;
       }
    }
+   product_count_ = 0;
 }
+

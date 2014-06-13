@@ -21,15 +21,15 @@ class Product{
 private:
    string product_ID;
    double price;
-   int quantity;
+   int quantity_;
    string product_description;
    
 public:
    //Constructor: provide default and non-default constructor using member initializer syntax
-   Product() : product_ID(""), price(0), quantity(0), product_description("") {};
+   Product() : product_ID(""), price(0), quantity_(0), product_description("") {};
 
    Product(string product_ID, double price, int quantity, string product_description)
-   : product_ID(product_ID), price(price), quantity(quantity), product_description(product_description)
+   : product_ID(product_ID), price(price), quantity_(quantity), product_description(product_description)
    {};
 
    //destructor
@@ -38,19 +38,20 @@ public:
    //Functions: get/set functions for all data.
    string getproduct_ID() {return product_ID;}
    double getPrice() {return price;}
-   int getQuantity() {return quantity;}
+   int getQuantity() {return quantity_;}
    string getProduct_description() {return product_description;}
-
-   friend void showProduct(const Product&);
+   void addQuantity(int quantity){quantity_ += quantity;}
    void setproduct_ID(string new_product_ID) {product_ID = new_product_ID;}
    void setPrice(double new_price) {price = new_price;}
-   void setQuantity(int new_quantity) {quantity = new_quantity;}
+   void setQuantity(int new_quantity) {quantity_ = new_quantity;}
    void setProduct_description(string new_product_description) {
    product_description = new_product_description;
    }
+
    friend class ProductDatabase;
    // Also provide a friend function (showProduct) for this class that will output all Product information.
    // Make sure to define the correct parameter required for this function.
+   friend void showProduct(const Product&);
 
    
 };

@@ -12,12 +12,10 @@
 
 void showProduct(const Product& p)
 {
-   cout << "Product:" << endl;
-   cout << "  ID: " << p.product_ID << endl;
-   cout << "  Price: " << p.price << endl;
-   cout << "  Quantity: " << p.quantity << endl;
-   cout << "  Description: "<< p.product_description << endl;
-   //...
+   cout << "Product ID: " << p.product_ID;
+   cout << " Description: "<< p.product_description;
+   cout << " Price: $" << fixed << setprecision(2) << p.price;
+   cout << " Quantity: " << p.quantity_ << endl;
 }
 
 

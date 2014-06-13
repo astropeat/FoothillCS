@@ -11,12 +11,18 @@
 #include <iostream>
 #include <iomanip> 
 #include <cmath>
+
 #include "IOMSapp.h"
 using namespace std;
 
 int main()
 {
-    IOMSapp OBJ;
-    OBJ.run();
+   IOMSapp * ioms= new IOMSapp();
+
+   if (ioms->authenticate() == true){
+      ioms->initialize_database();
+      ioms->run();
+   }
+   delete ioms;
 }
 
