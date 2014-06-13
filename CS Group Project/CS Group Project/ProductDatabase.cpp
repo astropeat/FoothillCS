@@ -109,6 +109,7 @@ void ProductDatabase::addNewProduct(){
          new_product=new Product(new_ID, new_Price, new_QTY, new_description);
       }
    }
+   // TODO: call sort
 }
 
  
@@ -154,7 +155,6 @@ void ProductDatabase::sortProductDB(){
 
 //getProduct: return a pointer to a Product given a product ID
 Product* ProductDatabase::getProduct(string ProductID){
-   //FIXME: implement this
    for(int i=0; i<product_count_; i++){
       if(product[i]->product_ID==ProductID){
          return product[i];

@@ -48,9 +48,10 @@ public:
    product_description = new_product_description;
    }
 
+   //FIXME: We should NOT do this line below. Please fix.
    friend class ProductDatabase;
-   // Also provide a friend function (showProduct) for this class that will output all Product information.
-   // Make sure to define the correct parameter required for this function.
+
+
    friend void showProduct(const Product&);
 
    
