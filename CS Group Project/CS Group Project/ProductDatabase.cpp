@@ -50,7 +50,7 @@ void ProductDatabase::buildB()
          getline(ss, part, '#');
          
          ss2.str(part);
-         int quantity;
+         int quantity= atoi(part.c_str());
          ss2 >> quantity;
           
          product[product_count_]= new Product(product_id, price, quantity, description);
@@ -115,8 +115,9 @@ void ProductDatabase::addNewProduct(){
 
 void ProductDatabase::discontinueProduct(string Product_ID_){
    for(int i=0; i<product_count_; i++){
-      if (product[i]->product_ID==Product_ID_){
-         delete &product[i];
+      if (product[i]->product_ID==Product_ID_)
+      {
+         delete product[i];
       }
    }
 }

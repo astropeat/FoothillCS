@@ -74,6 +74,7 @@ void IOMSapp::run()
 {
     if (SS->authenticate()==true)
     {
+        int x= 0;
         option=0;
         while (option!=8)
         {
@@ -82,13 +83,45 @@ void IOMSapp::run()
             switch (option)
             {
                 case 1:
-                    PD->buildB();
+                    while (x==0){
+                        PD->buildB();
+                        x++;
+                    
+                    }
                     PD->DisplayProduct();
                     break;
                 case 2:
                 {
                     PD->addNewProduct();
+                    break;
+                }
                     
+                case 3:
+                {
+                    cout<<"Enter the Product"<<endl;
+                    string id;
+                    cin>>id;
+                    PD->discontinueProduct(id);
+                    break;
+                }
+                case 4:
+                {
+                    cout<<"Enter the Product ID"<<endl;
+                    string productid;
+                    cin>>productid;
+                    cout<<"How much would you like to add?"<<endl;
+                    int add;
+                    cin>>add;
+                    PD->stockProduct(productid, add);
+                    break;
+                }
+                case 5:
+                {
+                    string prdid;
+                    cout<<"Enter Product Id---->";
+                    cin>>prdid;
+                    PD->productQuery(prdid);
+                    break;
                 }
                 default:
                     break;
