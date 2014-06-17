@@ -19,16 +19,16 @@ using namespace std;
 
 class Product{
 private:
-   string product_ID;
+   int product_ID;
    double price;
    int quantity_;
    string product_description;
    
 public:
    //Constructor: provide default and non-default constructor using member initializer syntax
-   Product() : product_ID(""), price(0), quantity_(0), product_description("") {};
+   Product() : product_ID(0), price(0), quantity_(0), product_description("") {};
 
-   Product(string product_ID, double price, int quantity, string product_description)
+   Product(int product_ID, double price, int quantity, string product_description)
    : product_ID(product_ID), price(price), quantity_(quantity), product_description(product_description)
    {};
 
@@ -36,14 +36,17 @@ public:
    ~Product() {cout << "Product is destroyed ..." << endl;}
 
    //Functions: get/set functions for all data.
-   string getproduct_ID() {return product_ID;}
+   int getproduct_ID() {return product_ID;}
+   void setproduct_ID(int new_product_ID) {product_ID = new_product_ID;}
+
    double getPrice() {return price;}
-   int getQuantity() {return quantity_;}
-   string getProduct_description() {return product_description;}
-   void addQuantity(int quantity){quantity_ += quantity;}
-   void setproduct_ID(string new_product_ID) {product_ID = new_product_ID;}
    void setPrice(double new_price) {price = new_price;}
+
+   int getQuantity() {return quantity_;}
    void setQuantity(int new_quantity) {quantity_ = new_quantity;}
+   void addQuantity(int quantity){quantity_ += quantity;}
+
+   string getProduct_description() {return product_description;}
    void setProduct_description(string new_product_description) {
    product_description = new_product_description;
    }
