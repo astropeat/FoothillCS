@@ -96,8 +96,6 @@ void ProductDatabase::addNewProduct(){
     cin>>new_description;
     cout<<endl;
 
-   // TODO:
-   // if it has more than maximum number of product do not add
    if (product_count_ >= MAXPRODUCT) {
       cout << "No space for new products" << endl;
       return;
@@ -122,7 +120,6 @@ void ProductDatabase::addNewProduct(){
  
 //Discontinue Product: delete a discontinued Product (delete by Product ID)
 void ProductDatabase::discontinueProduct(int Product_ID_){
-   // FIXME: shuffle
    for(int i=0; i<product_count_; i++){
       if (product[i]->product_ID==Product_ID_)
       {
