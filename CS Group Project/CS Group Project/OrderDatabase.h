@@ -59,10 +59,10 @@ public:
    void sort_orders();
 
    //getProductID: given an order ID search the Order array to find a matched Order then get product ID in the Order and return it
-   int getProductID(int order_ID);
+   int getProductID(string order_ID);
 
    //getOrder: given an order ID return a pointer to the Order object
-   Order* getOrder(int order_ID);
+   Order* getOrder(string order_ID);
 };
 
 

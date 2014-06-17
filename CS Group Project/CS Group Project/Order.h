@@ -31,7 +31,7 @@ class Order
 {
 private:
    // Data: order ID, product ID, quantity, customer name, shipping zip code, total invoice
-   int order_ID_;
+   string order_ID_;
    int product_ID_;
    int order_quantity_;
    string customer_name_;
@@ -44,7 +44,7 @@ public:
 
    Order() : order_ID_(0), product_ID_(0), order_quantity_(0), customer_name_(""), zip_code_(0), total_invoice_(0){};
 
-   Order(int order_ID, int product_ID, int order_quantity,
+   Order(string order_ID, int product_ID, int order_quantity,
          string customer_name, int zip_code, double total_invoice)
    : order_ID_(order_ID), product_ID_(product_ID),
      order_quantity_(order_quantity), customer_name_(customer_name),
@@ -54,7 +54,7 @@ public:
 
    //get/set functions for all data
 
-   int getorder_ID(){return order_ID_;}
+   string getorder_ID(){return order_ID_;}
    void setorder_ID(int new_order_ID) {order_ID_ = new_order_ID;}
 
    int getproduct_ID(){return product_ID_;}

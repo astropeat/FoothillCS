@@ -24,26 +24,29 @@ void OrderDatabase::buildDB(){
       while (getline(my_file, line)){
          //cout << line << endl;
          stringstream ss(line);
-         stringstream ss2;
          string part;
 
          // read order id
          getline(ss, part, ';');
-         ss2.str(part);
-         int order_id;
-         ss2 >> order_id;
+         string order_id = part;
 
          // read product id
          getline(ss, part, ';');
-         ss2.str(part);
          int product_id;
-         ss2 >> product_id;
+         if (!(stringstream(part) >> product_id))
+         {
+            cout << "Could not convert '" << part << "' into a product_id." << endl;
+            return;
+         }
 
          // read order quantity
          getline(ss, part, ';');
-         ss2.str(part);
-         int order_quantity;
-         ss2 >> order_quantity;
+         int quantity;
+         if (!(stringstream(part) >> quantity))
+         {
+            cout << "Could not convert '" << part << "' into a quantity." << endl;
+            return;
+         }
 
          // read customer name
          getline(ss, part, ';');
@@ -51,17 +54,23 @@ void OrderDatabase::buildDB(){
 
          // read zip code
          getline(ss, part, ';');
-         ss2.str(part);
          int zip_code;
-         ss2 >> zip_code;
+         if (!(stringstream(part) >> zip_code))
+         {
+            cout << "Could not convert '" << part << "' into a zip_code." << endl;
+            return;
+         }
 
          // read total invoice
          getline(ss, part, ';');
-         ss2.str(part);
          double total_invoice;
-         ss2 >> total_invoice;
+         if (!(stringstream(part) >> total_invoice))
+         {
+            cout << "Could not convert '" << part << "' into a total_invoice." << endl;
+            return;
+         }
 
-         order[order_count_] = new Order(order_id, product_id, order_quantity, customer_name, zip_code, total_invoice);
+         order[order_count_] = new Order(order_id, product_id, quantity, customer_name, zip_code, total_invoice);
          order_count_ += 1;
       }
       sort_orders();
@@ -72,7 +81,8 @@ void OrderDatabase::buildDB(){
 //View orders (display all orders). Note that if Order ID is set to empty string then do not display it
 void OrderDatabase::view_orders(){
    for (int i=0;i<order_count_;i++)
-      {
+   {
+      if (order[i]->getorder_ID() != "")
          showOrder(*order[i]);
    }
 };
@@ -101,7 +111,7 @@ void OrderDatabase::sort_orders(){
 
 //getProductID: given an order ID search the Order array to find a matched Order
 //then get product ID in the Order and return it
-int OrderDatabase::getProductID(int order_ID){
+int OrderDatabase::getProductID(string order_ID){
    Order* order = getOrder(order_ID);
    if (order == NULL){
       cout << "Match not found" << endl;
@@ -111,7 +121,7 @@ int OrderDatabase::getProductID(int order_ID){
 }
 
 //getOrder: given an order ID return a pointer to the Order object
-Order* OrderDatabase::getOrder(int order_ID){
+Order* OrderDatabase::getOrder(string order_ID){
    for(int i=0; i<order_count_; i++){
       if(order[i]-> getorder_ID()==order_ID){
          return order[i];

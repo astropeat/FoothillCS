@@ -24,19 +24,22 @@ void ProductDatabase::buildB()
 {
    string line;
    ifstream myfile (data_file_);
+
    if (myfile.is_open())
    {
       while (getline(myfile, line)){
          //cout << line << endl;
          stringstream ss(line);
-         stringstream ss2;
          string part;
 
          // read id
          getline(ss, part, '#');
-         ss2.str(part);
          int product_id;
-         ss2 >> product_id;
+         if (!(stringstream(part) >> product_id))
+         {
+            cout << "There was a problem parsing the product database!" << endl;
+            return;
+         }
 
          // read description
          getline(ss, part, '#');
@@ -44,16 +47,21 @@ void ProductDatabase::buildB()
 
          // read price
          getline(ss, part, '#');
-         
-         ss2.str(part);
          double price;
-         ss2 >> price;
+         if (!(stringstream(part) >> price))
+         {
+            cout << "There was a problem parsing the product database!" << endl;
+            return;
+         }
 
          // read quantity
          getline(ss, part, '#');
-         ss2.str(part);
          int quantity;
-         ss2 >> quantity;
+         if (!(stringstream(part) >> quantity))
+         {
+            cout << "There was a problem parsing the product database!" << endl;
+            return;
+         }
           
          product[product_count_] = new Product(product_id, price, quantity, description);
          product_count_ += 1;

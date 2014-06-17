@@ -122,6 +122,23 @@ void IOMSapp::run()
 
          case 7:
          {
+            string orderid;
+            //ask user input for an order ID.
+            cout<<"Enter the Order ID: ";
+            cin >> orderid;
+            Order* order = OD->getOrder(orderid);
+            //Invoke getProductID from Order database class based on the order ID.
+            int productID = OD->getProductID(orderid);
+            //Invoke getProduct from ProductDatabase to get a pointer to a Product object.
+            Product* product = PD->getProduct(productID);
+            //Now invoke process order from that Product pointer.
+            if (product->processOrder(order)){
+               //If the process order return true invoke clear from the Order
+               order->clear();
+               cout << "Order successfully processed" << endl;
+            }else{
+               cout << "Order did not process" << endl;
+            }
 
          }
 

@@ -28,7 +28,7 @@ void showProduct(const Product& p)
 //Otherwise it returns false (can’t process Order due to limited stocking)
 
 bool Product::processOrder(Order* order){
-   if (order->getorder_ID() != this->product_ID){
+   if (order->getproduct_ID() != this->product_ID){
       cout << "Invalid order." << endl;
       return false;}
    if (this->quantity_ >= order->getorder_quantity()){
