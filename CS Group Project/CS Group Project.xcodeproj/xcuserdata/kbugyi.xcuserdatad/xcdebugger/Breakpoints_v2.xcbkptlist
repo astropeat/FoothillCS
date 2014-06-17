@@ -144,13 +144,119 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CS Group Project/ProductDatabase.cpp"
-            timestampString = "424333656.116694"
+            timestampString = "424656986.212373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "ProductDatabase::resetDB()"
+            startingLineNumber = "187"
+            endingLineNumber = "187">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS Group Project/ProductDatabase.cpp"
+            timestampString = "424656986.212373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "ProductDatabase::getProduct(int ProductID)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS Group Project/ProductDatabase.cpp"
+            timestampString = "424656986.212373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "ProductDatabase::stockProduct(int Product_ID_, int QTY)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS Group Project/ProductDatabase.cpp"
+            timestampString = "424656826.366841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "ProductDatabase::discontinueProduct(int Product_ID_)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CS Group Project/ProductDatabase.cpp"
+            timestampString = "424656826.366841"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "ProductDatabase::discontinueProduct(int Product_ID_)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProductDatabase::discontinueProduct(int)"
+                  moduleName = "CS Group Project"
+                  urlString = "file:///Users/kbugyi/Documents/FoothillCS/CS%20Group%20Project/CS%20Group%20Project/ProductDatabase.cpp"
+                  timestampString = "424656986.527259"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to std::__1::basic_ifstream&lt;char, std::__1::char_traits&lt;char&gt; &gt;::~basic_ifstream()"
+                  moduleName = "CS Group Project"
+                  urlString = "file:///Users/kbugyi/Documents/FoothillCS/CS%20Group%20Project/CS%20Group%20Project/ProductDatabase.cpp"
+                  timestampString = "424656986.527505"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "non-virtual thunk to std::__1::basic_ifstream&lt;char, std::__1::char_traits&lt;char&gt; &gt;::~basic_ifstream()"
+                  moduleName = "CS Group Project"
+                  urlString = "file:///Users/kbugyi/Documents/FoothillCS/CS%20Group%20Project/CS%20Group%20Project/ProductDatabase.cpp"
+                  timestampString = "424656986.527636"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
