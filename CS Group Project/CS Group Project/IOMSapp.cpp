@@ -38,7 +38,7 @@ IOMSapp::~IOMSapp()
 void IOMSapp::initialize_database()
 {
    PD->buildB();
-   // TODO: Initialize order database
+   OD->buildDB();
 }
 
 void IOMSapp::welcomemessage()
@@ -112,6 +112,17 @@ void IOMSapp::run()
             cin>>prdid;
             PD->productQuery(prdid);
             break;
+         }
+
+         case 6:
+         {
+            OD->view_orders();
+            break;
+         }
+
+         case 7:
+         {
+
          }
 
          default:

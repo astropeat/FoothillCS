@@ -7,55 +7,31 @@
 //
 
 #include "Order.h"
+#include "OrderDatabase.h"
 
-//read order text file. change code below to do so....
+// Function: view(show) order function
 
-/* void ProductDatabase::buildB ( ) {
+void showOrder(const Order& p)
+{
+   cout << "Order ID: " << p.order_ID_;
+   cout << " Product ID: " << p.product_ID_;
+   cout << " Order Quantity: "<< p.order_quantity_ << endl;
+   cout << " Customer Name: " << p.customer_name_;
+   cout << " Zip Code: " << p.zip_code_ << endl;
+   cout << " Invoice Total: " << fixed << setprecision(2) << p.total_invoice_;
+}
 
- // ADD YOUR CODE HERE TO DECLARE VARIABLES for INPUT
+//Function: clear order (set all data to 0 or NULL or empty string)
 
- ifstreanm fin;
+void Order::clear(){
+   order_ID_ = 0;
+   product_ID_ = 0;
+   order_quantity_ = 0;
+   customer_name_ = "";
+   zip_code_ = 0;
+   total_invoice_ = 0;
+};
 
- fin.open (filename);
 
- if (fin.is_open ( ) == false ) {
 
- cout << “ERROR: Failed to open file:  “ <<  filename << endl;
 
- exit (-1);
-
- }
-
- // ADD YOUR CODE HERE to
-
- //  1. Call resetDB
-
- //  2. set Product count to 0
-
- while ( fin >> productID )
-
- {
-
- fin.ignore ( );
-
- getline (fin, productDescription,'#') ;
-
- fin  >> price;
-
- fin.ignore ( );
-
- fin >> quantity ;
-
- // ADD YOUR CODE HERE
-
- // to dynamically instantiate a Product object and assign it to the array of pointers
-
- // increment product count (array index)
-
- }
-
- fin.close ( );
-
- } // end of buildDB
-
-*/

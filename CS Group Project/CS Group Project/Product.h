@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include "order.h"
 
 using namespace std;
 
@@ -51,7 +52,8 @@ public:
    product_description = new_product_description;
    }
 
-   //FIXME: We should NOT do this line below. Please fix.
+   bool processOrder(Order* order);
+
    friend class ProductDatabase;
 
 

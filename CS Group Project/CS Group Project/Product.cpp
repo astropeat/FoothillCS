@@ -9,6 +9,7 @@
 
 
 #include "Product.h"
+#include "Order.h"
 
 void showProduct(const Product& p)
 {
@@ -19,28 +20,21 @@ void showProduct(const Product& p)
 }
 
 
-/*
 
- Functions: processOrder that takes an Order object.
- If Product has more quantity than Order’s quantity then Order is processed.
- The function reduces the Product’s quantity before return true.
- Otherwise it returns false (can’t process Order due to limited stocking)
 
- Sample of text file:
- 2357#Sony LED TV 46 in#859.95#145
- 3589#Samsung Galaxy 5#259.99#239
+//Functions: processOrder that takes an Order object.
+//If Product has more quantity than Order’s quantity then Order is processed.
+//The function reduces the Product’s quantity before return true.
+//Otherwise it returns false (can’t process Order due to limited stocking)
 
- */
-
-/*
-
-//some bullshit code to flesh out the idea below
-bool processOrder(Order){
-   if (Product.quantity >= order.quantity){
-      Order();
-      product.quantity - order.quantity;
+bool Product::processOrder(Order* order){
+   if (order->getorder_ID() != this->product_ID){
+      cout << "Invalid order." << endl;
+      return false;}
+   if (this->quantity_ >= order->getorder_quantity()){
+      this->quantity_ -= order->getorder_quantity();
+      return true;
    }
    cout << "Can't process Order due to limited stocking." << endl;
    return false;
 }
-*/
