@@ -87,7 +87,7 @@ void IOMSapp::run()
          case 3:
          {
             cout<<"Enter the Product ID: "<<endl;
-            string id;
+            int id;
             cin>>id;
             PD->discontinueProduct(id);
             break;
@@ -96,7 +96,7 @@ void IOMSapp::run()
          case 4:
          {
             cout<<"Enter the Product ID: "<<endl;
-            string productid;
+            int productid;
             cin>>productid;
             cout<<"How much would you like to add?"<<endl;
             int add;
@@ -107,7 +107,7 @@ void IOMSapp::run()
 
          case 5:
          {
-            string prdid;
+            int prdid;
             cout<<"Enter the Product ID: ";
             cin>>prdid;
             PD->productQuery(prdid);
