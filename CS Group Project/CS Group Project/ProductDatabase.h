@@ -46,15 +46,15 @@ public:
    void buildB();
 
    void addNewProduct();
-   void discontinueProduct(string);
-   void stockProduct(string, int);
-   void productQuery(string);
+   void discontinueProduct(int Product_ID_);
+   void stockProduct(int Product_ID_, int QTY);
+   void productQuery(int Product_ID_);
    void sortProductDB();
    void DisplayProducts();
    void resetDB();
 
    //getProduct: return a pointer to a Product given a product ID
-   Product* getProduct(string ProductID);
+   Product* getProduct(int ProductID);
 };
 
 #endif /* defined(__CS_Group_Project__ProductDatabase__) */

@@ -2,8 +2,8 @@
 //  ProductDatabase.cpp
 //  CS Group Project
 //
-//  Created by Katrina Bugyi on 5/31/14.
-//jason
+//  Created by Katrina Bugyi, Jason Ngo, Jose Parente, Anthony Moore, Sarah Romaniuk on 5/31/14.
+//
 //  Copyright (c) 2014 Katrina Bugyi. All rights reserved.
 //
 
@@ -34,7 +34,9 @@ void ProductDatabase::buildB()
 
          // read id
          getline(ss, part, '#');
-         string product_id = part;
+         ss2.str(part);
+         int product_id;
+         ss2 >> product_id;
 
          // read description
          getline(ss, part, '#');
@@ -49,13 +51,12 @@ void ProductDatabase::buildB()
 
          // read quantity
          getline(ss, part, '#');
-         
          ss2.str(part);
-         int quantity= atoi(part.c_str());
+         int quantity;
          ss2 >> quantity;
           
-         product[product_count_]= new Product(product_id, price, quantity, description);
-         product_count_ +=1;
+         product[product_count_] = new Product(product_id, price, quantity, description);
+         product_count_ += 1;
       }
    }
    else cout << "Unable to open file " << data_file_ << endl;
@@ -74,7 +75,7 @@ void ProductDatabase::DisplayProducts()
  
 //Add new Product: add new Product to inventory
 void ProductDatabase::addNewProduct(){
-   string new_ID;
+   int new_ID;
    double new_Price;
    int new_QTY;
    string new_description;
@@ -96,67 +97,96 @@ void ProductDatabase::addNewProduct(){
     cout<<endl;
 
    // TODO:
-   // add new product to product array
-   // if product ID exists do not add product
    // if it has more than maximum number of product do not add
-   for(int i; i<product_count_; i++)
+   if (product_count_ >= MAXPRODUCT) {
+      cout << "No space for new products" << endl;
+      return;
+   }
+   int i = 0;
+   for(; i<product_count_; i++)
    {
-      if(product[i]->product_ID!=new_ID)
+      if(product[i]->product_ID == new_ID)
       {
-         int*ip;
-         Product *new_product;
-         ip=new int;
-         new_product=new Product(new_ID, new_Price, new_QTY, new_description);
+         // if product ID exists do not add product
+         cout << "Product ID exists. Can not add this product ID." << endl;
+         return;
       }
    }
-   // TODO: call sort
+
+   product[i] = new Product(new_ID, new_Price, new_QTY, new_description);
+   product_count_ += 1;
+
+   sortProductDB();
 }
 
  
 //Discontinue Product: delete a discontinued Product (delete by Product ID)
-void ProductDatabase::discontinueProduct(string Product_ID_){
+void ProductDatabase::discontinueProduct(int Product_ID_){
    // FIXME: shuffle
    for(int i=0; i<product_count_; i++){
       if (product[i]->product_ID==Product_ID_)
       {
          delete product[i];
+         product[i] = NULL;
+         int j = i + 1;
+         for (; j < product_count_; ++j)
+         {
+            product[j - 1] = product[j];
+         }
+         product[product_count_ - 1] = NULL;
+         product_count_ -= 1;
+         return;
       }
    }
-   // FIXME: product not found?
+   cout << "Product not found" << endl;
 }
  
 //Stocking a Product: add more quantity to a Product
-
-void ProductDatabase::stockProduct(string Product_ID_, int QTY){
+void ProductDatabase::stockProduct(int Product_ID_, int QTY){
    for(int i=0; i<product_count_; i++){
       if (product[i]->product_ID==Product_ID_){
          product[i]->addQuantity(QTY);
+         return;
       }
    }
-   // FIXME: product not found?
+   cout << "Product not found." << endl;
 }
- 
- 
-//Query a Product: display all information on a Product given a Product Id
 
-void ProductDatabase::productQuery(string Product_ID_){
+//Query a Product: display all information on a Product given a Product Id
+void ProductDatabase::productQuery(int Product_ID_){
    Product * p = getProduct(Product_ID_);
    if (p != NULL){
       showProduct(*p);
    }
 }
- 
-//sort: sort the Product database by product ID
 
+//sort: sort the Product database by product ID
 void ProductDatabase::sortProductDB(){
-   //FIXME: implement this 
+   Product *tmp;
+   bool swapped = true;
+
+   while (swapped)
+   {
+      swapped = false;
+      for (int i = 1; i < product_count_; ++i)
+      {
+         if (product[i - 1]->product_ID > product[i]->product_ID)
+         {
+            // Then swap
+            tmp = product[i - 1];
+            product[i - 1] = product[i];
+            product[i] = tmp;
+            swapped = true;
+         }
+      }
+   }
 }
 
 
 //getProduct: return a pointer to a Product given a product ID
-Product* ProductDatabase::getProduct(string ProductID){
+Product* ProductDatabase::getProduct(int ProductID){
    for(int i=0; i<product_count_; i++){
-      if(product[i]->product_ID==ProductID){
+      if(product[i]-> product_ID==ProductID){
          return product[i];
       }
    }
@@ -177,5 +207,4 @@ void ProductDatabase::resetDB()
       }
    }
    product_count_ = 0;
-}
-
+};
