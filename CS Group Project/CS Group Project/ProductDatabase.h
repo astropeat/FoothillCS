@@ -13,7 +13,7 @@
 #include <iomanip>
 #include "Product.h"
 #include <fstream>
-static const int MAXPRODUCT=10;
+static const int MAXPRODUCT=32;
 using namespace std;
 
 //Data: an array of pointers (max is 10000) to Product objects, a string for the data file,

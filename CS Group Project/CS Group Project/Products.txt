@@ -1,9 +1,16 @@
-1111#Legos#5.00#1001
-1234#Macbook Pro#2000.00#3
-2357#Sony LED TV 46 inch#859.95#145
-3589#Samsung Galaxy 5#259.99#239
-1112#Legos#5.00#1001
-1235#Macbook Pro#2000.00#3
-2356#Sony LED TV 46 inch#859.95#145
-3587#Samsung Galaxy 5#259.99#239
-1118#Legos#5.00#1001
+1245#iPhone 5#599.99#200
+234#DVD player#99.95#120
+3671#XBOX 360#199.99#1
+120#PlayStation 4#195.99#123
+3344#Samsung TV 46inch#1229.99#1111
+891#Sony TV 55inch#2491.99#125
+3901#Samsung Galaxy#205#451
+888#Sony VAIO Laptop 2014#899.97#134
+1#Logitech Mouse 350#25.59#1000
+567#HP Printer#310#2000
+4712#CD drive#45.59#23
+76#Panasonic Phone#65.69#1248
+551#Lightbulb 60W#2.59#200
+7812#Pens#2.99#3000
+278#HP Desktop monitor#120#250
+541#Shortel phone#45.99#65

@@ -66,6 +66,7 @@ void ProductDatabase::buildB()
          product[product_count_] = new Product(product_id, price, quantity, description);
          product_count_ += 1;
       }
+      sortProductDB();
    }
    else cout << "Unable to open file " << data_file_ << endl;
 }
