@@ -12,14 +12,10 @@
 //Non-default constructor: take a character array (char [ ] )
 //and two doubles to initialize the Fruit’s data.
 //You must dynamically allocate memory for the fruit name data
-Fruit::Fruit(char* name, double weight, double unit_price)
-   : weight_(weight), unit_price_(unit_price)
+Fruit::Fruit(const char* fruit_name, double weight, double unit_price)
+   : fruit_name_(NULL), weight_(weight), unit_price_(unit_price)
 {
-   name_ = new char[strlen(name)+1];
-
-   for(int i =0; name[i]; i++){
-      name_[i] = name[i];
-   }
+   set_name(fruit_name);
 }
 
 // Copy constructor: provide a copy constructor as this class has pointers as data members
@@ -28,9 +24,19 @@ Fruit::Fruit(char* name, double weight, double unit_price)
 Fruit::Fruit(const Fruit &other)
    : weight_(other.weight_), unit_price_(other.unit_price_)
 {
-   name_ = new char[strlen(other.name_)+1];
+   fruit_name_ = new char[strlen(other.fruit_name_)+1];
 
-   for(int i =0; other.name_[i]; i++){
-      name_[i] = other.name_[i];
+   for(int i =0; other.fruit_name_[i]; i++){
+      fruit_name_[i] = other.fruit_name_[i];
+   }
+}
+
+void Fruit::set_name(const char* new_name){
+   if (fruit_name_ != NULL){
+      delete[]fruit_name_;
+   }
+   fruit_name_ = new char[strlen(new_name)+1];
+   for(int i=0; new_name[i]; i++){
+      fruit_name_[i] = new_name[i];
    }
 }
