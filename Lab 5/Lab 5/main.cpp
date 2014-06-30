@@ -1,10 +1,12 @@
-//
-//  main.cpp
-//  Lab 5
-//
-//  Created by Katrina Bugyi on 6/8/14.
-//  Copyright (c) 2014 Katrina Bugyi. All rights reserved.
-//20196180
+//============================================================================
+// File Name   : Lab5.cpp
+// Author      : Katrina Bugyi
+// Copyright   : Your copyright notice
+// Description : Lab 5 Foothill C++
+// Revision History:
+// Date              Version     Change ID    Author          Comment
+// 06-24-14          1.0         123          Katrina Bugyi   Turn in
+//============================================================================
 
 #include <iostream>
 #include "OnlineSuperMarket.h"
